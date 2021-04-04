@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="" />
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tryte-cipher/TryteDecriptor.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +20,11 @@
     </option>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.15.5/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1qgp7rOSGs6jZmIJORj8b6vPdDH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,5 +59,17 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="369" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1617512881244" />
+    <state x="574" y="365" key="Github.ShareDialog" timestamp="1617519859663">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="574" y="365" key="Github.ShareDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519859663" />
+    <state x="512" y="173" key="Github.UntrackedFilesDialog" timestamp="1617519866460">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1617519809674">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1617519809674" />
   </component>
 </project>
