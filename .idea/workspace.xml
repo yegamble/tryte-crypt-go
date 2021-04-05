@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="reorganise files into package.">
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="added tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tryte-cipher/TryteDecryptor.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/TryteDecryptor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +49,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="reorganise files into package." />
-    <option name="LAST_COMMIT_MESSAGE" value="reorganise files into package." />
+    <MESSAGE value="added tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tests" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -76,10 +76,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617521231957">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617589074555">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617521231957" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617589074555" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1617519809674">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

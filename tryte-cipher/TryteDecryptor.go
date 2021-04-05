@@ -2,7 +2,6 @@ package tryte_cipher
 
 import (
 	"encoding/hex"
-	"fmt"
 	"github.com/iotaledger/iota.go/converter"
 	"github.com/iotaledger/iota.go/trinary"
 )
@@ -13,8 +12,6 @@ func Decrypt(encryptedSeed trinary.Trytes, passphrase string, options ScryptOpti
 	if err != nil {
 		return "", err
 	}
-
-	fmt.Println(asciiEncryptedSeed)
 
 	encryptedSeedBytes, err := hex.DecodeString(asciiEncryptedSeed)
 	if err != nil {

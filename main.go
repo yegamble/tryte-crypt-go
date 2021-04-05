@@ -29,8 +29,8 @@ func main() {
 		log.Fatal(err)
 	}
 
-	log.Println(run)
-	log.Println(run2)
+	log.Println("Encrypted: " + run)
+	log.Println("Decrypted: " + run2)
 
 	if strings.Compare(tryteString, run2) != 0 {
 		log.Println("Test Failed")
