@@ -4,6 +4,8 @@ import (
 	"encoding/hex"
 	"github.com/iotaledger/iota.go/converter"
 	"github.com/iotaledger/iota.go/trinary"
+	"math"
+	"strconv"
 	"strings"
 )
 
@@ -42,18 +44,18 @@ func Decrypt(encryptedSeed trinary.Trytes, passphrase string, options ScryptOpti
 
 func getToughnessFromSeed(encryptedSeed *string) int {
 
-	if strings.Contains(*encryptedSeed, ":T1") {
-		*encryptedSeed = strings.ReplaceAll(*encryptedSeed, ":T1", "")
-		return 32768
-	} else if strings.Contains(*encryptedSeed, ":T2") {
-		*encryptedSeed = strings.ReplaceAll(*encryptedSeed, ":T2", "")
-		return 65536
-	} else if strings.Contains(*encryptedSeed, ":T3") {
-		*encryptedSeed = strings.ReplaceAll(*encryptedSeed, ":T3", "")
-		return 131072
-	} else if strings.Contains(*encryptedSeed, ":T4") {
-		*encryptedSeed = strings.ReplaceAll(*encryptedSeed, ":T4", "")
-		return 262144
+	if strings.Contains(*encryptedSeed, ":T") {
+		lastChar := (*encryptedSeed)[len(*encryptedSeed)-1:]
+		*encryptedSeed = strings.ReplaceAll(*encryptedSeed, ":T"+lastChar, "")
+
+		power, err := strconv.Atoi(lastChar)
+		if err != nil {
+			return 0
+		}
+
+		toughness := int(math.Pow(2, float64(power+14)))
+
+		return toughness
 	}
 
 	return 16384
