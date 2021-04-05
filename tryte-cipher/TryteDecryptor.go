@@ -11,7 +11,7 @@ import (
 
 func Decrypt(encryptedSeed trinary.Trytes, passphrase string, options ScryptOptions) (trinary.Trytes, error) {
 
-	options.N = getToughnessFromSeed(&encryptedSeed)
+	options.N, options = getToughnessFromSeed(&encryptedSeed, options)
 
 	asciiEncryptedSeed, err := converter.TrytesToASCII(encryptedSeed)
 	if err != nil {
@@ -42,7 +42,7 @@ func Decrypt(encryptedSeed trinary.Trytes, passphrase string, options ScryptOpti
 	return tryteDecryptedSeed, nil
 }
 
-func getToughnessFromSeed(encryptedSeed *string) int {
+func getToughnessFromSeed(encryptedSeed *string, options ScryptOptions) (int, ScryptOptions) {
 
 	if strings.Contains(*encryptedSeed, ":T") {
 		lastChar := (*encryptedSeed)[len(*encryptedSeed)-1:]
@@ -50,13 +50,23 @@ func getToughnessFromSeed(encryptedSeed *string) int {
 
 		power, err := strconv.Atoi(lastChar)
 		if err != nil {
-			return 0
+			return 0, options
 		}
+
+		options.N = int(math.Pow(2, float64(power+14)))
+		options.R = 8 + power
+		options.P = 8 + power
+		options.KeyLen = 16
 
 		toughness := int(math.Pow(2, float64(power+14)))
 
-		return toughness
+		return toughness, options
 	}
 
-	return 16384
+	options.N = int(math.Pow(2, float64(14)))
+	options.R = 8
+	options.P = 8
+	options.KeyLen = 16
+
+	return 16384, options
 }

@@ -9,8 +9,10 @@ import (
 	"github.com/iotaledger/iota.go/converter"
 	"github.com/iotaledger/iota.go/trinary"
 	"golang.org/x/crypto/scrypt"
+	"log"
 	"math"
 	"strconv"
+	"time"
 )
 
 type TryteEncryptor interface{}
@@ -35,6 +37,8 @@ func ToughnessSetting(n int) (string, error) {
 	return "", nil
 }
 
+var loggingTime time.Time
+
 func FindPowerOfNToughness(n int) (int, error) {
 
 	if n%2 != 0 {
@@ -54,7 +58,15 @@ func FindPowerOfNToughness(n int) (int, error) {
 
 //Encrypt tryte string using AES
 // the passphrase comes from scrypt, based on the SHA256 hash of the passphrase.
-func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions) (string, error) {
+func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toughnessInput int) (string, error) {
+	loggingTime = time.Now()
+
+	if options.N == 0 {
+		options.N = int(math.Pow(2, float64(toughnessInput+14)))
+		options.R = 8 + toughnessInput
+		options.P = 8 + toughnessInput
+		options.KeyLen = 16
+	}
 
 	if seed == "" {
 		return "", errors.New("seed is required")
@@ -69,6 +81,8 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions) (str
 		return "", err
 	}
 
+	log.Println("seed converted to bytes")
+
 	aesGCM, err := CreateAESCryptor(passphrase, options)
 	if err != nil {
 		return "", err
@@ -76,11 +90,13 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions) (str
 
 	nonce := make([]byte, 12)
 	encryptedSeedBytes := aesGCM.Seal(nil, nonce, seedBytes, nil)
+	log.Println("seed encrypted, now converting to ASCII")
 
 	encryptedSeedTrytes, err := converter.ASCIIToTrytes(hex.EncodeToString(encryptedSeedBytes))
 	if err != nil {
 		return "", err
 	}
+	log.Println(time.Since(loggingTime))
 
 	err = trinary.ValidTrytes(encryptedSeedTrytes)
 	if err != nil {

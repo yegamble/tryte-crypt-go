@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="improve toughness algorithm to be more flexible and accept more N inputs.">
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="modfied how toughness is retrieved from encrypted seeds.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/crypter_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/crypter_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tryte-cipher/TryteDecryptor.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/TryteDecryptor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +45,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -55,7 +59,8 @@
     <MESSAGE value="add test file" />
     <MESSAGE value="add toughness to cipher." />
     <MESSAGE value="improve toughness algorithm to be more flexible and accept more N inputs." />
-    <option name="LAST_COMMIT_MESSAGE" value="improve toughness algorithm to be more flexible and accept more N inputs." />
+    <MESSAGE value="modfied how toughness is retrieved from encrypted seeds." />
+    <option name="LAST_COMMIT_MESSAGE" value="modfied how toughness is retrieved from encrypted seeds." />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -73,6 +78,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877@0.23.1440.877" timestamp="1617538459716" />
+    <state x="466" y="323" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1617610302062">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="466" y="323" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.877@0.23.1440.877" timestamp="1617610302062" />
     <state x="574" y="365" key="Github.ShareDialog" timestamp="1617519859663">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -81,10 +90,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617605021213">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617606483327">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617605021213" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617606483327" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1617519809674">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
