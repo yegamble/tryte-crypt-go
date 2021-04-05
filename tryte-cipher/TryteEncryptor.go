@@ -24,6 +24,7 @@ type ScryptOptions struct {
 	KeyLen int
 }
 
+//Determine if the toughness level should be printed in the encrypted seed
 func ToughnessSetting(n int) (string, error) {
 
 	toughness, err := FindPowerOfNToughness(n)
