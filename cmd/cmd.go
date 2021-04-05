@@ -1,30 +1,31 @@
-package main
+package cmd
 
 import (
 	"bufio"
 	"fmt"
 	"github.com/iotaledger/iota.go/trinary"
+
 	tryteCipher "github.com/yegamble/tryte-crypt-go/tryte-cipher"
 	"os"
 	"strconv"
 	"strings"
 )
 
-func mainCMD() {
+func MainCMD() {
 
 	buf := bufio.NewReader(os.Stdin)
 
-	fmt.Print("Do you want to Encrypt or Decrypt an IOTA seed? (e/D) ")
+	fmt.Print("Do you want to Encrypt or Decrypt an IOTA seed? (E/d) ")
 	selection, err := buf.ReadBytes('\n')
 	if err != nil {
-		main()
+		return
 	}
 
 	selectionString := strings.TrimSuffix(string(selection), "\n")
-	if strings.ToLower(selectionString) == "d" {
-		decryptSeed(buf)
-	} else {
+	if strings.ToLower(selectionString) == "e" {
 		encryptSeed(buf)
+	} else {
+		decryptSeed(buf)
 	}
 
 }
