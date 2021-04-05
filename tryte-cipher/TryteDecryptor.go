@@ -42,6 +42,7 @@ func Decrypt(encryptedSeed trinary.Trytes, passphrase string, options ScryptOpti
 	return tryteDecryptedSeed, nil
 }
 
+//find the difficulty within the string seed
 func getToughnessFromSeed(encryptedSeed *string, options ScryptOptions) (int, ScryptOptions) {
 
 	if strings.Contains(*encryptedSeed, ":T") {
