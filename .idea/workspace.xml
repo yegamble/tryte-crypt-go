@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="add MakeFile and yml">
-      <change afterPath="$PROJECT_DIR$/DockerFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="update Dockerfile info and .travis.yml">
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +149,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed hex decode to decode from byte directly." />
     <MESSAGE value="add test file" />
     <MESSAGE value="add toughness to cipher." />
     <MESSAGE value="improve toughness algorithm to be more flexible and accept more N inputs." />
@@ -176,7 +173,8 @@
     <MESSAGE value="update negative number and wrong seed test. add extra error for negtative difficulty/toughness test." />
     <MESSAGE value="switch encrypt and decrypt in command line so encrypt key is default." />
     <MESSAGE value="add MakeFile and yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="add MakeFile and yml" />
+    <MESSAGE value="update Dockerfile info and .travis.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Dockerfile info and .travis.yml" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -254,10 +252,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617659475538">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617659677162">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617659475538" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617659677162" />
     <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617632367234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

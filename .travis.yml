@@ -11,7 +11,7 @@ before_install:
 
 script:
   - make lint test
-  - docker build -t classik19881/simple_service .
+  - docker build -t yegamble/tryte-crypt-go .
 
 deploy:
   provider: script
