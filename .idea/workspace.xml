@@ -19,8 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="add cmd.go for text entry">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="prompt for seed generation in cmd.go">
       <change beforePath="$PROJECT_DIR$/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +102,8 @@
     <MESSAGE value="fix README.md" />
     <MESSAGE value="encryption difficulty capped at 9" />
     <MESSAGE value="add cmd.go for text entry" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cmd.go for text entry" />
+    <MESSAGE value="prompt for seed generation in cmd.go" />
+    <option name="LAST_COMMIT_MESSAGE" value="prompt for seed generation in cmd.go" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -141,10 +141,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617622817969">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617623401964">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617622817969" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617623401964" />
     <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617619733413">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

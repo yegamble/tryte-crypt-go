@@ -35,6 +35,9 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	} else {
+		if generateSeed != "" {
+			fmt.Println("Generated Seed: " + generateSeed)
+		}
 		fmt.Println("Encrypted Seed: " + encrypt)
 	}
 }
