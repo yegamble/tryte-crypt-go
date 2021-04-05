@@ -1,7 +1,13 @@
 # tryte-crypt-go
 GoLang package that encrypts tryte strings, including for IOTA private seeds. This is based on [vbakke's tryte-ecrypt library](https://github.com/vbakke/tryte-encrypt) that was written in JavaScript.
 
-## Installation
+## CMD Line
+`go build cmd.go`\
+`go run cmd.go`
+
+Follow the instructions in command line to encrypt and existing seed or generate a new seed. Recommended use is offline.
+
+## Server Installation
 `go build main.go`\
 `go run main.go`
 
