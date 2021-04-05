@@ -22,7 +22,7 @@ difficulty integer
 seed string \
 passphrase  string 
 
-### /generate\
+### /generate
 passphrase string \
 difficulty int 
 
