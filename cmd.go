@@ -21,6 +21,7 @@ func main() {
 		seed = promptSeed(buf)
 	} else {
 		seed = generateSeed
+		fmt.Println("Seed Randomly Generated Locally")
 	}
 
 	passphrase := promptPassphrase(buf)
@@ -115,6 +116,9 @@ func promptDifficulty(buf *bufio.Reader) int {
 	toughnessInt, err := strconv.Atoi(toughnessString)
 	if err != nil {
 		fmt.Println(err)
+		return promptDifficulty(buf)
+	} else if toughnessInt > 9 {
+		fmt.Println("Difficulty is Greater Than 9")
 		return promptDifficulty(buf)
 	}
 

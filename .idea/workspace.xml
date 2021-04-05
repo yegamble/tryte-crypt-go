@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="prompt for seed generation in cmd.go">
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="show Generated Seed to User.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +104,8 @@
     <MESSAGE value="encryption difficulty capped at 9" />
     <MESSAGE value="add cmd.go for text entry" />
     <MESSAGE value="prompt for seed generation in cmd.go" />
-    <option name="LAST_COMMIT_MESSAGE" value="prompt for seed generation in cmd.go" />
+    <MESSAGE value="show Generated Seed to User." />
+    <option name="LAST_COMMIT_MESSAGE" value="show Generated Seed to User." />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -113,10 +115,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="764" y="302" key="#Go_Modules/0.23.1440.877@0.23.1440.877" timestamp="1617512810790" />
-    <state x="369" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617512881244">
+    <state x="369" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617624106216">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="369" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1617512881244" />
+    <state x="369" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1617624106216" />
     <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1617538459716">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -141,10 +143,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617623401964">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617623583504">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617623401964" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617623583504" />
     <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617619733413">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
