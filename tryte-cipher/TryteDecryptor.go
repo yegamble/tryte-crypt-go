@@ -57,7 +57,7 @@ func getToughnessFromSeed(encryptedSeed *string, options ScryptOptions) (int, Sc
 		options.N = int(math.Pow(2, float64(power+14)))
 		options.R = 8 + power
 		options.P = 8 + power
-		options.KeyLen = 16
+		options.KeyLen = 32
 
 		toughness := int(math.Pow(2, float64(power+14)))
 
@@ -67,7 +67,7 @@ func getToughnessFromSeed(encryptedSeed *string, options ScryptOptions) (int, Sc
 	options.N = int(math.Pow(2, float64(14)))
 	options.R = 8
 	options.P = 8
-	options.KeyLen = 16
+	options.KeyLen = 32
 
 	return 16384, options
 }

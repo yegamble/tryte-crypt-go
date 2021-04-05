@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="lowercase dockerfile">
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="remove make lint test.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryte-cipher/TryteDecryptor.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/TryteDecryptor.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +151,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modfied how toughness is retrieved from encrypted seeds." />
     <MESSAGE value="add more tests" />
     <MESSAGE value="tests for missing parameters" />
     <MESSAGE value="move handler code to own file." />
@@ -175,7 +175,8 @@
     <MESSAGE value="fix script in yml" />
     <MESSAGE value="change makefile binary name" />
     <MESSAGE value="lowercase dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="lowercase dockerfile" />
+    <MESSAGE value="remove make lint test." />
+    <option name="LAST_COMMIT_MESSAGE" value="remove make lint test." />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -253,10 +254,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617660248071">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617660952282">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617660248071" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617660952282" />
     <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617632367234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
