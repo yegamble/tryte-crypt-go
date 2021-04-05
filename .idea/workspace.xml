@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="switch encrypt and decrypt in command line so encrypt key is default.">
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="add MakeFile and yml">
+      <change afterPath="$PROJECT_DIR$/DockerFile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +151,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added text to test results." />
     <MESSAGE value="changed hex decode to decode from byte directly." />
     <MESSAGE value="add test file" />
     <MESSAGE value="add toughness to cipher." />
@@ -174,7 +175,8 @@
     <MESSAGE value="change command main function." />
     <MESSAGE value="update negative number and wrong seed test. add extra error for negtative difficulty/toughness test." />
     <MESSAGE value="switch encrypt and decrypt in command line so encrypt key is default." />
-    <option name="LAST_COMMIT_MESSAGE" value="switch encrypt and decrypt in command line so encrypt key is default." />
+    <MESSAGE value="add MakeFile and yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="add MakeFile and yml" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -188,10 +190,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="150" y="130" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1617657683577" />
-    <state x="450" y="270" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617659113810">
+    <state x="450" y="270" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617659524158">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="450" y="270" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1617659113810" />
+    <state x="450" y="270" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1617659524158" />
     <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1617538459716">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -252,10 +254,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617658337496">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617659475538">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617658337496" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617659475538" />
     <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617632367234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
