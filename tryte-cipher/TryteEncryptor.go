@@ -4,6 +4,8 @@ import (
 	"crypto/aes"
 	"crypto/cipher"
 	"crypto/sha256"
+	"encoding/hex"
+	"github.com/iotaledger/iota.go/converter"
 	"github.com/iotaledger/iota.go/trinary"
 	"golang.org/x/crypto/scrypt"
 )
@@ -17,22 +19,32 @@ type ScryptOptions struct {
 
 //Encrypt tryte string using AES
 // the passphrase comes from scrypt, based on the SHA256 hash of the passphrase.
-func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions) ([]byte, error) {
+func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions) (trinary.Trytes, error) {
 
 	seedBytes, err := trinary.TrytesToBytes(seed)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
-	ciphertext, err := CreateAESCryptor(seedBytes, passphrase, options)
+	aesGCM, err := CreateAESCryptor(passphrase, options)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
-	return ciphertext, nil
+	nonce := make([]byte, 12)
+	ciphertext := aesGCM.Seal(nil, nonce, seedBytes, nil)
+
+	plaintext := hex.EncodeToString(ciphertext)
+
+	encryptedSeed, err := converter.ASCIIToTrytes(plaintext)
+	if err != nil {
+		return "", err
+	}
+
+	return encryptedSeed, nil
 }
 
-func CreateAESCryptor(seedBytes []byte, passphrase string, option ScryptOptions) ([]byte, error) {
+func CreateAESCryptor(passphrase string, option ScryptOptions) (cipher.AEAD, error) {
 
 	passphraseBytes := []byte(passphrase)
 	hashedPassphrase := sha256.New().Sum(passphraseBytes)
@@ -52,9 +64,5 @@ func CreateAESCryptor(seedBytes []byte, passphrase string, option ScryptOptions)
 		return nil, err
 	}
 
-	nonce := make([]byte, 12)
-
-	ciphertext := aesGCM.Seal(nil, nonce, seedBytes, nil)
-
-	return ciphertext, nil
+	return aesGCM, nil
 }
