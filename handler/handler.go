@@ -19,8 +19,12 @@ func SetRoutes() {
 		return c.Status(fiber.StatusOK).JSON("Welcome to Seed Generator")
 	})
 
-	seedHandler.Post("/", func(c *fiber.Ctx) error {
+	seedHandler.Post("/encrypt", func(c *fiber.Ctx) error {
 		return encryptSeed(c)
+	})
+
+	seedHandler.Post("/decrypt", func(c *fiber.Ctx) error {
+		return decryptSeed(c)
 	})
 
 	err := app.Listen("localhost:3000")
@@ -55,5 +59,27 @@ func encryptSeed(c *fiber.Ctx) error {
 
 	return c.Status(fiber.StatusOK).JSON(fiber.Map{
 		"encrypted_seed": encrypt,
+	})
+}
+
+func decryptSeed(c *fiber.Ctx) error {
+
+	seed := c.FormValue("seed")
+	if seed == "" {
+		return c.Status(fiber.StatusOK).JSON("Seed is Required")
+	}
+
+	passphrase := c.FormValue("passphrase")
+	if passphrase == "" {
+		return c.Status(fiber.StatusOK).JSON("Passphrase is Required")
+	}
+
+	decrypt, err := tryteCipher.Decrypt(seed, passphrase, defaultOptions)
+	if err != nil {
+		return c.Status(fiber.StatusOK).JSON(err.Error())
+	}
+
+	return c.Status(fiber.StatusOK).JSON(fiber.Map{
+		"decrypted_seed": decrypt,
 	})
 }
