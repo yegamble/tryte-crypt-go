@@ -27,6 +27,8 @@ allowing navigation to the server using http://127.0.0.1:3000 or localhost:3000.
     
 The following enpdoints for this application, /encrypt and /decrypt each expect form-data.
 
+<img width="1395" alt="image" src="https://user-images.githubusercontent.com/9465387/113575799-8c58cc80-9672-11eb-98ae-4a71b478d848.png">
+
 ### /encrypt
 seed string \
 passphrase  string \
