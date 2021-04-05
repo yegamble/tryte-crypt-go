@@ -11,9 +11,44 @@ import (
 )
 
 func main() {
+
+	buf := bufio.NewReader(os.Stdin)
+
+	fmt.Print("Do you want to Encrypt or Decrypt an IOTA seed? (e/D) ")
+	selection, err := buf.ReadBytes('\n')
+	if err != nil {
+		main()
+	}
+
+	selectionString := strings.TrimSuffix(string(selection), "\n")
+	if strings.ToLower(selectionString) == "d" {
+		decryptSeed(buf)
+	} else {
+		encryptSeed(buf)
+	}
+
+}
+
+func decryptSeed(buf *bufio.Reader) {
+	var defaultOptions tryteCipher.ScryptOptions
+
+	seed := promptSeed(buf)
+	passphrase := promptPassphrase(buf)
+
+	decrypt, err := tryteCipher.Decrypt(seed, passphrase, defaultOptions)
+	if err != nil {
+		fmt.Println(err)
+		decryptSeed(buf)
+	}
+
+	fmt.Println("Decrypted Seed: " + decrypt)
+
+}
+
+func encryptSeed(buf *bufio.Reader) {
+
 	var defaultOptions tryteCipher.ScryptOptions
 	var seed string
-	buf := bufio.NewReader(os.Stdin)
 
 	generateSeed := promptGenerateSeed(buf)
 
@@ -30,7 +65,7 @@ func main() {
 	encrypt, err := tryteCipher.Encrypt(seed, passphrase, defaultOptions, toughnessInt)
 	if err != nil {
 		fmt.Println(err)
-		main()
+		encryptSeed(buf)
 	}
 
 	if err != nil {
@@ -49,6 +84,7 @@ func promptGenerateSeed(buf *bufio.Reader) string {
 	if err != nil {
 		return ""
 	}
+
 	generateSeedString := strings.TrimSuffix(string(generateSeed), "\n")
 
 	if generateSeedString == "Y" || generateSeedString == "y" {
@@ -64,6 +100,8 @@ func promptGenerateSeed(buf *bufio.Reader) string {
 
 func promptSeed(buf *bufio.Reader) string {
 
+	var seedStringSanitized string
+
 	fmt.Print("Enter IOTA Seed: ")
 	seed, err := buf.ReadBytes('\n')
 	if err != nil {
@@ -77,7 +115,12 @@ func promptSeed(buf *bufio.Reader) string {
 		promptSeed(buf)
 	}
 
-	err = trinary.ValidTrytes(seedString)
+	if strings.Contains(seedString, ":T") {
+		lastChar := (seedString)[len(seedString)-1:]
+		seedStringSanitized = strings.ReplaceAll(seedString, ":T"+lastChar, "")
+	}
+
+	err = trinary.ValidTrytes(seedStringSanitized)
 	if err != nil {
 		fmt.Println(err)
 		return promptSeed(buf)
