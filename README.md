@@ -34,7 +34,7 @@ difficulty int
 
 ## Usage
 
-Raw IOTA Seed 
+Raw IOTA Seed (using the passphrase "test")
 `A999TEST999SEED99999999999999999999999999999999999999999999999999999999999999999Z`
 
 Encrypted Seed
