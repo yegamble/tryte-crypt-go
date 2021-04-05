@@ -50,6 +50,8 @@ func encryptSeed(c *fiber.Ctx) error {
 	toughness, err := strconv.Atoi(c.FormValue("difficulty"))
 	if err != nil {
 		return c.Status(fiber.StatusOK).JSON("Encryption Difficulty is Not a Valid Number")
+	} else if toughness > 20 {
+		return c.Status(fiber.StatusOK).JSON("Encryption Difficulty Cannot Exceed 20")
 	}
 
 	encrypt, err := tryteCipher.Encrypt(seed, passphrase, defaultOptions, toughness)
