@@ -9,6 +9,8 @@ import (
 	"github.com/iotaledger/iota.go/converter"
 	"github.com/iotaledger/iota.go/trinary"
 	"golang.org/x/crypto/scrypt"
+	"math"
+	"strconv"
 )
 
 type TryteEncryptor interface{}
@@ -20,29 +22,34 @@ type ScryptOptions struct {
 	KeyLen int
 }
 
-func toughnessSetting(n int) (string, error) {
+func ToughnessSetting(n int) (string, error) {
 
-	if n == 16384 {
-		return "", nil
+	toughness, err := FindPowerOfNToughness(n)
+	if err != nil {
+		return "", err
 	}
 
-	if n == 32768 {
-		return ":T1", nil
+	if toughness > 0 {
+		return ":T" + strconv.Itoa(toughness), nil
 	}
-
-	if n == 65536 {
-		return ":T2", nil
-	}
-
-	if n == 131072 {
-		return ":T3", nil
-	}
-
-	if n == 262144 {
-		return ":T4", nil
-	}
-
 	return "", nil
+}
+
+func FindPowerOfNToughness(n int) (int, error) {
+
+	if n%2 != 0 {
+		return 0, errors.New("number is not a power of 2")
+	}
+
+	for i := 0; i < n; i++ {
+
+		if int(math.Pow(2, float64(i))) == n {
+			return i - 14, nil
+		}
+
+	}
+
+	return -1, nil
 }
 
 //Encrypt tryte string using AES
@@ -80,7 +87,7 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions) (str
 		return "", err
 	}
 
-	toughness, err := toughnessSetting(options.N)
+	toughness, err := ToughnessSetting(options.N)
 	if err != nil {
 		return "", err
 	}
