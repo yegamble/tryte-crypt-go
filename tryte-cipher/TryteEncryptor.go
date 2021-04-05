@@ -126,7 +126,7 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 func CreateAESCryptor(passphrase string, option ScryptOptions) (cipher.AEAD, error) {
 
 	passphraseBytes := []byte(passphrase)
-	hashedPassphrase := sha256.New().Sum(passphraseBytes)
+	hashedPassphrase := sha256.New().Sum(sha256.New().Sum(passphraseBytes))
 
 	encryptionKey, err := scrypt.Key(passphraseBytes, hashedPassphrase, option.N, option.R, option.P, option.KeyLen)
 	if err != nil {
