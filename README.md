@@ -22,6 +22,6 @@ difficulty integer
 seed string \
 passphrase  string 
 
-##Usage
+## Usage
 
 In progress
