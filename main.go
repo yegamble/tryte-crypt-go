@@ -13,10 +13,7 @@ import (
 var defaultOptions tryteCipher.ScryptOptions
 
 func init() {
-	//defaultOptions.N = 1048576
-	//defaultOptions.R = 12
-	//defaultOptions.P = 12
-	//defaultOptions.KeyLen = 16
+
 }
 
 const letters = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ" //pool of letters to generate IOTA seed

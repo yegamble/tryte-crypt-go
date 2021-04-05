@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="modfied how toughness is retrieved from encrypted seeds.">
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="add more tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/crypter_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/crypter_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tryte-cipher/TryteDecryptor.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/TryteDecryptor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +66,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="reorganise files into package." />
     <MESSAGE value="added tests" />
@@ -60,7 +86,8 @@
     <MESSAGE value="add toughness to cipher." />
     <MESSAGE value="improve toughness algorithm to be more flexible and accept more N inputs." />
     <MESSAGE value="modfied how toughness is retrieved from encrypted seeds." />
-    <option name="LAST_COMMIT_MESSAGE" value="modfied how toughness is retrieved from encrypted seeds." />
+    <MESSAGE value="add more tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add more tests" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -90,10 +117,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617606483327">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617611117537">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617606483327" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617611117537" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1617519809674">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

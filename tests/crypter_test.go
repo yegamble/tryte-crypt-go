@@ -26,7 +26,7 @@ func init() {
 
 }
 
-func TestMissingPassphrase(t *testing.T) {
+func TestMissingPassphraseEncryption(t *testing.T) {
 
 	tryteString, err := GenerateRandomSeed()
 	if err != nil {
@@ -46,6 +46,45 @@ func TestMissingPassphrase(t *testing.T) {
 
 }
 
+func TestMissingPassphraseDecryption(t *testing.T) {
+
+	tryteString, err := GenerateRandomSeed()
+	if err != nil {
+		log.Println(err)
+		t.Fail()
+	}
+
+	testSeed, err := trinary.NewTrytes(tryteString)
+
+	//var options scryptOptions
+	run, err := tryteCipher.Encrypt(testSeed, "qwerty123456", defaultOptions, 0)
+	if err != nil {
+		log.Println("Test Passed")
+	}
+
+	log.Println("Encrypted: " + run)
+
+	start := time.Now()
+
+	run2, err := tryteCipher.Decrypt(run, "", defaultOptions)
+	if err != nil {
+		log.Println(err)
+
+	} else if run2 != "" {
+		t.Fail()
+	}
+
+	log.Println("Decrypted: " + run2)
+	log.Println(time.Since(start))
+
+	if strings.Compare(tryteString, run2) != 0 {
+		log.Println("Test Failed")
+	} else if strings.Compare(tryteString, run2) == 0 {
+		log.Println("Test Passed")
+	}
+
+}
+
 func TestNegativeNumbersDecrypting(t *testing.T) {
 	tryteString, err := GenerateRandomSeed()
 	if err != nil {
@@ -56,7 +95,7 @@ func TestNegativeNumbersDecrypting(t *testing.T) {
 	test, err := trinary.NewTrytes(tryteString)
 
 	//var options scryptOptions
-	_, err = tryteCipher.Encrypt(test, "test", defaultOptions, -1)
+	_, err = tryteCipher.Encrypt(test, "qwerty123456", defaultOptions, -1)
 	if err != nil {
 		log.Println("Test Passed")
 	}
@@ -72,10 +111,11 @@ func TestNegativeNumbersEncrypting(t *testing.T) {
 	test, err := trinary.NewTrytes(tryteString)
 
 	//var options scryptOptions
-	_, err = tryteCipher.Encrypt(test, "test", defaultOptions, -1)
+	_, err = tryteCipher.Encrypt(test, "qwerty123456", defaultOptions, -1)
 	if err != nil {
 		log.Println("Test Passed")
 	}
+
 }
 
 func TestIfSeedIsCorrect(t *testing.T) {
@@ -90,7 +130,7 @@ func TestIfSeedIsCorrect(t *testing.T) {
 		test, err := trinary.NewTrytes(tryteString)
 
 		//var options scryptOptions
-		run, err := tryteCipher.Encrypt(test, "test", defaultOptions, i)
+		run, err := tryteCipher.Encrypt(test, "qwerty123456", defaultOptions, i)
 		if err != nil {
 			log.Fatal(err)
 			t.Fail()
@@ -99,7 +139,7 @@ func TestIfSeedIsCorrect(t *testing.T) {
 
 		start := time.Now()
 
-		run2, err := tryteCipher.Decrypt(run, "test", defaultOptions)
+		run2, err := tryteCipher.Decrypt(run, "qwerty123456", defaultOptions)
 		if err != nil {
 			log.Fatal(err)
 			t.Fail()
