@@ -76,6 +76,10 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 		return "", errors.New("encryption difficulty cannot exceed 9")
 	}
 
+	if toughnessInput < 0 {
+		return "", errors.New("encryption difficulty cannot be negative")
+	}
+
 	if options.N < 0 {
 		return "", errors.New("encryption difficulty cannot be negative")
 	}

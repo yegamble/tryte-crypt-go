@@ -21,8 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="change command main function.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/cmd.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/cmd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/cryptor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cryptor_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +70,71 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/handler" />
     </key>
+  </component>
+  <component name="RunManager" selected="Go Test.TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (3)">
+    <configuration name="TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tryte-crypt-go" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/yegamble/tryte-crypt-go/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestWrongSeed\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tryte-crypt-go" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/yegamble/tryte-crypt-go/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestWrongSeed\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (3)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tryte-crypt-go" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/yegamble/tryte-crypt-go/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestWrongSeed\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tryte-crypt-go" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/yegamble/tryte-crypt-go/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestWrongSeed\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tryte-crypt-go" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/yegamble/tryte-crypt-go/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (3)" />
+        <item itemvalue="Go Test.TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (2)" />
+        <item itemvalue="Go Test.TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (1)" />
+        <item itemvalue="Go Test.TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests" />
+        <item itemvalue="Go Test.go test github.com/yegamble/tryte-crypt-go/tests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,10 +187,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="764" y="302" key="#Go_Modules/0.23.1440.877@0.23.1440.877" timestamp="1617512810790" />
-    <state x="369" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617624106216">
+    <state x="150" y="130" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617657683577">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="369" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1617624106216" />
+    <state x="150" y="130" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1617657683577" />
     <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1617538459716">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -145,6 +211,38 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
+    <state width="699" height="381" key="GridCell.Tab.0.bottom" timestamp="1617658185208">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="699" height="381" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617658185208" />
+    <state width="699" height="381" key="GridCell.Tab.0.center" timestamp="1617658185208">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="699" height="381" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617658185208" />
+    <state width="699" height="381" key="GridCell.Tab.0.left" timestamp="1617658185207">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="699" height="381" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617658185207" />
+    <state width="699" height="381" key="GridCell.Tab.0.right" timestamp="1617658185208">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="699" height="381" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617658185208" />
+    <state width="915" height="286" key="GridCell.Tab.1.bottom" timestamp="1617657696385">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="915" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617657696385" />
+    <state width="915" height="286" key="GridCell.Tab.1.center" timestamp="1617657696385">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="915" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1617657696385" />
+    <state width="915" height="286" key="GridCell.Tab.1.left" timestamp="1617657696384">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="915" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1617657696384" />
+    <state width="915" height="286" key="GridCell.Tab.1.right" timestamp="1617657696385">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="915" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1617657696385" />
     <state x="358" y="100" key="SettingsEditor" timestamp="1617616201473">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

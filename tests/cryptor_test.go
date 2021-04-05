@@ -94,6 +94,9 @@ func TestNegativeNumbersDecrypting(t *testing.T) {
 	_, err = tryteCipher.Encrypt(test, "qwerty123456", defaultOptions, -1)
 	if err != nil {
 		log.Println("Test Passed")
+	} else {
+		t.Error("Negative Numbers Test Failed")
+		t.Fail()
 	}
 }
 
@@ -110,6 +113,50 @@ func TestNegativeNumbersEncrypting(t *testing.T) {
 	_, err = tryteCipher.Encrypt(test, "qwerty123456", defaultOptions, -1)
 	if err != nil {
 		log.Println("Test Passed")
+	} else {
+		t.Error("Negative Numbers Test Failed")
+		t.Fail()
+	}
+
+}
+
+func TestWrongSeed(t *testing.T) {
+
+	for i := 0; i < 5; i++ {
+		tryteString, err := tryteCipher.GenerateRandomSeed()
+		if err != nil {
+			log.Println(err)
+			t.Fail()
+		}
+
+		test, err := trinary.NewTrytes(tryteString)
+
+		//var options scryptOptions
+		run, err := tryteCipher.Encrypt(test, "qwerty123456", defaultOptions, i)
+		if err != nil {
+			log.Fatal(err)
+			t.Fail()
+		}
+		log.Println("Encrypted: " + run)
+
+		start := time.Now()
+
+		wrongSeed := "PCCBXAZAUCQCABBBAB9BRCUCRCABQCXAZASCUCUATCUCRCABRCUAXAYAQCSCUAPCRCBBYAVAQCTCPCABXAPCVABBVAQCZASCUAYAZATCYA9B9BUAPCWAABBBRCYAUCCBUCTCZAYAPCTCABBBTCZAWA9BYA9BTCCBYAUCXAQCVAVACBYAXAVAYAPCUCWABBBBVAWACBABQCCBYAUCZABBPCWAXA9BBBUCYAVAWAABUASCXAYAQCUCCBZAUABBQCYATCYA:T2"
+		run2, err := tryteCipher.Decrypt(wrongSeed, "qwerty123456", defaultOptions)
+		if err != nil {
+			log.Println(err)
+		} else {
+			t.Fail()
+		}
+
+		if strings.Compare(tryteString, run2) != 0 {
+			log.Println("Test Pass")
+		} else if strings.Compare(tryteString, run2) == 0 {
+			log.Println("Decrypted: " + run2)
+			log.Println(time.Since(start))
+			log.Println("Test Failed")
+			t.Fail()
+		}
 	}
 
 }
