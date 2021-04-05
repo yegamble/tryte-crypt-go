@@ -5,10 +5,13 @@ import (
 	"crypto/cipher"
 	"crypto/sha256"
 	"encoding/hex"
+	"errors"
 	"github.com/iotaledger/iota.go/converter"
 	"github.com/iotaledger/iota.go/trinary"
 	"golang.org/x/crypto/scrypt"
 )
+
+type TryteEncryptor interface{}
 
 type ScryptOptions struct {
 	N      int
@@ -17,9 +20,42 @@ type ScryptOptions struct {
 	KeyLen int
 }
 
+func toughnessSetting(n int) (string, error) {
+
+	if n == 16384 {
+		return "", nil
+	}
+
+	if n == 32768 {
+		return ":T1", nil
+	}
+
+	if n == 65536 {
+		return ":T2", nil
+	}
+
+	if n == 131072 {
+		return ":T3", nil
+	}
+
+	if n == 262144 {
+		return ":T4", nil
+	}
+
+	return "", nil
+}
+
 //Encrypt tryte string using AES
 // the passphrase comes from scrypt, based on the SHA256 hash of the passphrase.
-func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions) (trinary.Trytes, error) {
+func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions) (string, error) {
+
+	if seed == "" {
+		return "", errors.New("seed is required")
+	}
+
+	if passphrase == "" {
+		return "", errors.New("passphrase is required")
+	}
 
 	seedBytes, err := trinary.TrytesToBytes(seed)
 	if err != nil {
@@ -39,7 +75,17 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions) (tri
 		return "", err
 	}
 
-	return encryptedSeedTrytes, nil
+	err = trinary.ValidTrytes(encryptedSeedTrytes)
+	if err != nil {
+		return "", err
+	}
+
+	toughness, err := toughnessSetting(options.N)
+	if err != nil {
+		return "", err
+	}
+
+	return encryptedSeedTrytes + toughness, nil
 }
 
 func CreateAESCryptor(passphrase string, option ScryptOptions) (cipher.AEAD, error) {
