@@ -1,5 +1,5 @@
 # tryte-crypt-go
-GoLang package that encrypts tryte strings, including for IOTA private seeds. This is based on [vbakke's tryte-ecrypt library](https://github.com/vbakke/tryte-encrypt) that was written in node.js.
+GoLang package that encrypts tryte strings, including for IOTA private seeds. This is based on [vbakke's tryte-ecrypt library](https://github.com/vbakke/tryte-encrypt) that was written in JavaScript.
 
 ## Installation
 `go build main.go`\
