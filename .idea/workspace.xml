@@ -19,8 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="double sha encryption">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="update status bad request in handler for error returns">
       <change beforePath="$PROJECT_DIR$/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +105,8 @@
     <MESSAGE value="prompt for seed generation in cmd.go" />
     <MESSAGE value="show Generated Seed to User." />
     <MESSAGE value="double sha encryption" />
-    <option name="LAST_COMMIT_MESSAGE" value="double sha encryption" />
+    <MESSAGE value="update status bad request in handler for error returns" />
+    <option name="LAST_COMMIT_MESSAGE" value="update status bad request in handler for error returns" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -144,14 +144,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617624905827">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617632435927">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617624905827" />
-    <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617624408188">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617632435927" />
+    <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617632367234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1617624408188" />
+    <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1617632367234" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1617617497401">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
