@@ -29,9 +29,7 @@ func Decrypt(encryptedSeed trinary.Trytes, passphrase string, options ScryptOpti
 		return "", err
 	}
 
-	plaintext := hex.EncodeToString(openSeed)
-
-	tryteDecryptedSeed, err := converter.ASCIIToTrytes(plaintext)
+	tryteDecryptedSeed, err := trinary.BytesToTrytes(openSeed, 81)
 	if err != nil {
 		return "", err
 	}

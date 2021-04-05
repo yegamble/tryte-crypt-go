@@ -32,16 +32,14 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions) (tri
 	}
 
 	nonce := make([]byte, 12)
-	ciphertext := aesGCM.Seal(nil, nonce, seedBytes, nil)
+	encryptedSeedBytes := aesGCM.Seal(nil, nonce, seedBytes, nil)
 
-	plaintext := hex.EncodeToString(ciphertext)
-
-	encryptedSeed, err := converter.ASCIIToTrytes(plaintext)
+	encryptedSeedTrytes, err := converter.ASCIIToTrytes(hex.EncodeToString(encryptedSeedBytes))
 	if err != nil {
 		return "", err
 	}
 
-	return encryptedSeed, nil
+	return encryptedSeedTrytes, nil
 }
 
 func CreateAESCryptor(passphrase string, option ScryptOptions) (cipher.AEAD, error) {
