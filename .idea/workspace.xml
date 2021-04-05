@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="add seed generator.">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="fix README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/crypter_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cryptor_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +101,8 @@
     <MESSAGE value="update readme" />
     <MESSAGE value="limit toughness/encryption difficulty to 20" />
     <MESSAGE value="add seed generator." />
-    <option name="LAST_COMMIT_MESSAGE" value="add seed generator." />
+    <MESSAGE value="fix README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix README.md" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -137,14 +140,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617618736491">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617619008109">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617618736491" />
-    <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617618175616">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617619008109" />
+    <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617619733413">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1617618175616" />
+    <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1617619733413" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1617617497401">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
