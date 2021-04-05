@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/iotaledger/iota.go/converter"
 	"github.com/iotaledger/iota.go/trinary"
 	tryteCipher "github.com/yegamble/tryte-crypt-go/tryte-cipher"
 	"log"
@@ -14,7 +13,7 @@ func main() {
 	test, err := trinary.NewTrytes(tryteString)
 
 	var defaultOptions tryteCipher.ScryptOptions
-	defaultOptions.N = 8192
+	defaultOptions.N = 16384
 	defaultOptions.R = 8
 	defaultOptions.P = 8
 	defaultOptions.KeyLen = 16
@@ -33,9 +32,9 @@ func main() {
 	log.Println("Encrypted: " + run)
 	log.Println("Decrypted: " + run2)
 
-	test2, _ := converter.TrytesToASCII(run2)
-
-	if strings.Compare(run2, test2) != 0 {
+	if strings.Compare(tryteString, run2) != 0 {
 		log.Println("Test Failed")
+	} else if strings.Compare(tryteString, run2) == 0 {
+		log.Println("Test Passed")
 	}
 }
