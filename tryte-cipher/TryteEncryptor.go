@@ -39,6 +39,7 @@ func ToughnessSetting(n int) (string, error) {
 
 var loggingTime time.Time
 
+//Calculate the number of bits based on user input that is greater than 0
 func FindPowerOfNToughness(n int) (int, error) {
 
 	if n%2 != 0 {
@@ -52,20 +53,26 @@ func FindPowerOfNToughness(n int) (int, error) {
 		}
 
 	}
-
 	return -1, nil
 }
 
 //Encrypt tryte string using AES
 // the passphrase comes from scrypt, based on the SHA256 hash of the passphrase.
+// takes seed Tryte, passphrase of any string, optional ScryptOptions struct
+//Alternatively toughnessInput will calculate the required settings for AES
 func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toughnessInput int) (string, error) {
 	loggingTime = time.Now()
 
+	//Default Options for AES
 	if options.N == 0 {
 		options.N = int(math.Pow(2, float64(toughnessInput+14)))
 		options.R = 8 + toughnessInput
 		options.P = 8 + toughnessInput
 		options.KeyLen = 16
+	}
+
+	if options.N < 0 {
+		return "", errors.New("encryption difficulty cannot be negative")
 	}
 
 	if seed == "" {
@@ -111,6 +118,7 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 	return encryptedSeedTrytes + toughness, nil
 }
 
+//initialise Cipher with passphrase and options set in ScryptOptions struct
 func CreateAESCryptor(passphrase string, option ScryptOptions) (cipher.AEAD, error) {
 
 	passphraseBytes := []byte(passphrase)

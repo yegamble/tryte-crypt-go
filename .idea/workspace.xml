@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="tests for missing parameters">
-      <change afterPath="$PROJECT_DIR$/handler.go" afterDir="false" />
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="remove init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/handler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +63,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/handler" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -90,7 +94,9 @@
     <MESSAGE value="modfied how toughness is retrieved from encrypted seeds." />
     <MESSAGE value="add more tests" />
     <MESSAGE value="tests for missing parameters" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests for missing parameters" />
+    <MESSAGE value="move handler code to own file." />
+    <MESSAGE value="remove init" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove init" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -120,10 +126,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617611679351">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617614692290">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617611679351" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617614692290" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1617519809674">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

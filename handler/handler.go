@@ -1,4 +1,4 @@
-package main
+package handler
 
 import (
 	"github.com/gofiber/fiber/v2"
@@ -8,7 +8,9 @@ import (
 	"strconv"
 )
 
-func setRoutes() {
+var defaultOptions tryteCipher.ScryptOptions
+
+func SetRoutes() {
 	app := fiber.New()
 
 	seedHandler := app.Group("/", logger.New())

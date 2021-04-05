@@ -1,11 +1,9 @@
 package main
 
 import (
-	tryteCipher "github.com/yegamble/tryte-crypt-go/tryte-cipher"
+	"github.com/yegamble/tryte-crypt-go/handler"
 )
 
-var defaultOptions tryteCipher.ScryptOptions
-
 func main() {
-	setRoutes()
+	handler.SetRoutes()
 }
