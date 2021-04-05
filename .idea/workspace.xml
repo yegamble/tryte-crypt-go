@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="change command main function.">
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="switch encrypt and decrypt in command line so encrypt key is default.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/cmd.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/cryptor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cryptor_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/TryteEncryptor.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +68,7 @@
       <recent name="$PROJECT_DIR$/handler" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (3)">
+  <component name="RunManager" selected="Go Test.go test github.com/yegamble/tryte-crypt-go/tests">
     <configuration name="TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tryte-crypt-go" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -128,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.go test github.com/yegamble/tryte-crypt-go/tests" />
         <item itemvalue="Go Test.TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (3)" />
         <item itemvalue="Go Test.TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (2)" />
         <item itemvalue="Go Test.TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (1)" />
         <item itemvalue="Go Test.TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests" />
-        <item itemvalue="Go Test.go test github.com/yegamble/tryte-crypt-go/tests" />
       </list>
     </recent_temporary>
   </component>
@@ -152,8 +149,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reorganise files into package." />
-    <MESSAGE value="added tests" />
     <MESSAGE value="added text to test results." />
     <MESSAGE value="changed hex decode to decode from byte directly." />
     <MESSAGE value="add test file" />
@@ -177,7 +172,9 @@
     <MESSAGE value="double sha encryption" />
     <MESSAGE value="update status bad request in handler for error returns" />
     <MESSAGE value="change command main function." />
-    <option name="LAST_COMMIT_MESSAGE" value="change command main function." />
+    <MESSAGE value="update negative number and wrong seed test. add extra error for negtative difficulty/toughness test." />
+    <MESSAGE value="switch encrypt and decrypt in command line so encrypt key is default." />
+    <option name="LAST_COMMIT_MESSAGE" value="switch encrypt and decrypt in command line so encrypt key is default." />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -191,6 +188,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="150" y="130" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1617657683577" />
+    <state x="450" y="270" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617659113810">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="450" y="270" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1617659113810" />
     <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1617538459716">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -199,6 +200,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="466" y="323" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.877@0.23.1440.877" timestamp="1617610302062" />
+    <state x="99" y="123" width="1240" height="677" key="DiffContextDialog" timestamp="1617658572474">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="99" y="123" width="1240" height="677" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1617658572474" />
     <state x="756" y="330" key="EnvironmentVariablesDialog" timestamp="1617616196671">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -211,46 +216,46 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
-    <state width="699" height="381" key="GridCell.Tab.0.bottom" timestamp="1617658185208">
+    <state width="699" height="381" key="GridCell.Tab.0.bottom" timestamp="1617658634699">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="381" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617658185208" />
-    <state width="699" height="381" key="GridCell.Tab.0.center" timestamp="1617658185208">
+    <state width="699" height="381" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617658634699" />
+    <state width="699" height="381" key="GridCell.Tab.0.center" timestamp="1617658634699">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="381" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617658185208" />
-    <state width="699" height="381" key="GridCell.Tab.0.left" timestamp="1617658185207">
+    <state width="699" height="381" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617658634699" />
+    <state width="699" height="381" key="GridCell.Tab.0.left" timestamp="1617658634698">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="381" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617658185207" />
-    <state width="699" height="381" key="GridCell.Tab.0.right" timestamp="1617658185208">
+    <state width="699" height="381" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617658634698" />
+    <state width="699" height="381" key="GridCell.Tab.0.right" timestamp="1617658634699">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="381" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617658185208" />
-    <state width="915" height="286" key="GridCell.Tab.1.bottom" timestamp="1617657696385">
+    <state width="699" height="381" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617658634699" />
+    <state width="914" height="286" key="GridCell.Tab.1.bottom" timestamp="1617658505717">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="915" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617657696385" />
-    <state width="915" height="286" key="GridCell.Tab.1.center" timestamp="1617657696385">
+    <state width="914" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617658505717" />
+    <state width="914" height="286" key="GridCell.Tab.1.center" timestamp="1617658505716">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="915" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1617657696385" />
-    <state width="915" height="286" key="GridCell.Tab.1.left" timestamp="1617657696384">
+    <state width="914" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1617658505716" />
+    <state width="914" height="286" key="GridCell.Tab.1.left" timestamp="1617658505716">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="915" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1617657696384" />
-    <state width="915" height="286" key="GridCell.Tab.1.right" timestamp="1617657696385">
+    <state width="914" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1617658505716" />
+    <state width="914" height="286" key="GridCell.Tab.1.right" timestamp="1617658505717">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="915" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1617657696385" />
+    <state width="914" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1617658505717" />
     <state x="358" y="100" key="SettingsEditor" timestamp="1617616201473">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617632518998">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617658337496">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617632518998" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617658337496" />
     <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617632367234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
