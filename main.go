@@ -6,10 +6,6 @@ import (
 
 var defaultOptions tryteCipher.ScryptOptions
 
-func init() {
-
-}
-
 func main() {
 	setRoutes()
 }
