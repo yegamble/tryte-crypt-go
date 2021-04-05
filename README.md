@@ -5,7 +5,7 @@ GoLang package that encrypts tryte strings, including for IOTA private seeds. Th
 `go build cmd.go`\
 `go run cmd.go`
 
-Follow the instructions in command line to encrypt and existing seed or generate a new seed. Recommended use is offline.
+Follow the instructions in command line to encrypt and existing seed or generate a new seed. Recommended use is offline on an air gapped machine.
 
 ## Server Installation
 `go build main.go`\
