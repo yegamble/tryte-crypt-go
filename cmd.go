@@ -12,12 +12,18 @@ import (
 
 func main() {
 	var defaultOptions tryteCipher.ScryptOptions
+	var seed string
 	buf := bufio.NewReader(os.Stdin)
 
-	seed := promptSeed(buf)
+	generateSeed := promptGenerateSeed(buf)
+
+	if generateSeed == "" {
+		seed = promptSeed(buf)
+	} else {
+		seed = generateSeed
+	}
 
 	passphrase := promptPassphrase(buf)
-
 	toughnessInt := promptDifficulty(buf)
 
 	encrypt, err := tryteCipher.Encrypt(seed, passphrase, defaultOptions, toughnessInt)
@@ -31,6 +37,25 @@ func main() {
 	} else {
 		fmt.Println("Encrypted Seed: " + encrypt)
 	}
+}
+
+func promptGenerateSeed(buf *bufio.Reader) string {
+	fmt.Print("Generate Seed? (y/N): ")
+	generateSeed, err := buf.ReadBytes('\n')
+	if err != nil {
+		return ""
+	}
+	generateSeedString := strings.TrimSuffix(string(generateSeed), "\n")
+
+	if generateSeedString == "Y" || generateSeedString == "y" {
+		generatedSeed, err := tryteCipher.GenerateRandomSeed()
+		if err != nil {
+			return ""
+		}
+		return generatedSeed
+	}
+
+	return ""
 }
 
 func promptSeed(buf *bufio.Reader) string {
