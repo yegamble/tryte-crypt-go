@@ -41,26 +41,26 @@ func encryptSeed(c *fiber.Ctx) error {
 
 	seed := c.FormValue("seed")
 	if seed == "" {
-		return c.Status(fiber.StatusOK).JSON("Seed is Required")
+		return c.Status(fiber.StatusBadRequest).JSON("Seed is Required")
 	} else if trinary.ValidTrytes(seed) != nil {
 		return c.Status(fiber.StatusOK).JSON("Seed is Not a Valid 81-tryte Input")
 	}
 
 	passphrase := c.FormValue("passphrase")
 	if passphrase == "" {
-		return c.Status(fiber.StatusOK).JSON("Passphrase is Required")
+		return c.Status(fiber.StatusBadRequest).JSON("Passphrase is Required")
 	}
 
 	toughness, err := strconv.Atoi(c.FormValue("difficulty"))
 	if err != nil {
-		return c.Status(fiber.StatusOK).JSON("Encryption Difficulty is Not a Valid Number")
+		return c.Status(fiber.StatusBadRequest).JSON("Encryption Difficulty is Not a Valid Number")
 	} else if toughness > 20 {
-		return c.Status(fiber.StatusOK).JSON("Encryption Difficulty Cannot Exceed 20")
+		return c.Status(fiber.StatusBadRequest).JSON("Encryption Difficulty Cannot Exceed 20")
 	}
 
 	encrypt, err := tryteCipher.Encrypt(seed, passphrase, defaultOptions, toughness)
 	if err != nil {
-		return c.Status(fiber.StatusOK).JSON(err.Error())
+		return c.Status(fiber.StatusBadRequest).JSON(err.Error())
 	}
 
 	return c.Status(fiber.StatusOK).JSON(fiber.Map{
@@ -72,17 +72,17 @@ func decryptSeed(c *fiber.Ctx) error {
 
 	seed := c.FormValue("seed")
 	if seed == "" {
-		return c.Status(fiber.StatusOK).JSON("Seed is Required")
+		return c.Status(fiber.StatusBadRequest).JSON("Seed is Required")
 	}
 
 	passphrase := c.FormValue("passphrase")
 	if passphrase == "" {
-		return c.Status(fiber.StatusOK).JSON("Passphrase is Required")
+		return c.Status(fiber.StatusBadRequest).JSON("Passphrase is Required")
 	}
 
 	decrypt, err := tryteCipher.Decrypt(seed, passphrase, defaultOptions)
 	if err != nil {
-		return c.Status(fiber.StatusOK).JSON(err.Error())
+		return c.Status(fiber.StatusBadRequest).JSON(err.Error())
 	}
 
 	return c.Status(fiber.StatusOK).JSON(fiber.Map{
@@ -94,19 +94,19 @@ func generateAndEncryptSeed(c *fiber.Ctx) error {
 
 	passphrase := c.FormValue("passphrase")
 	if passphrase == "" {
-		return c.Status(fiber.StatusOK).JSON("Passphrase is Required")
+		return c.Status(fiber.StatusBadRequest).JSON("Passphrase is Required")
 	}
 
 	seed, err := tryteCipher.GenerateRandomSeed()
 	if err != nil {
-		return c.Status(fiber.StatusOK).JSON(err.Error())
+		return c.Status(fiber.StatusBadRequest).JSON(err.Error())
 	}
 
 	toughness, err := strconv.Atoi(c.FormValue("difficulty"))
 	if err != nil {
-		return c.Status(fiber.StatusOK).JSON("Encryption Difficulty is Not a Valid Number")
+		return c.Status(fiber.StatusBadRequest).JSON("Encryption Difficulty is Not a Valid Number")
 	} else if toughness > 9 {
-		return c.Status(fiber.StatusOK).JSON("Encryption Difficulty Cannot Exceed 9")
+		return c.Status(fiber.StatusBadRequest).JSON("Encryption Difficulty Cannot Exceed 9")
 	}
 
 	encrypt, err := tryteCipher.Encrypt(seed, passphrase, defaultOptions, toughness)
