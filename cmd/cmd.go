@@ -22,10 +22,10 @@ func MainCMD() {
 	}
 
 	selectionString := strings.TrimSuffix(string(selection), "\n")
-	if strings.ToLower(selectionString) == "e" {
-		encryptSeed(buf)
-	} else {
+	if strings.ToLower(selectionString) == "d" {
 		decryptSeed(buf)
+	} else {
+		encryptSeed(buf)
 	}
 
 }
