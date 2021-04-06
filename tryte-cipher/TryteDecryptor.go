@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+//Decrypt an Encrypted Tryte Seed
 func Decrypt(encryptedSeed trinary.Trytes, passphrase string, options ScryptOptions) (trinary.Trytes, error) {
 
 	options.N, options = getToughnessFromSeed(&encryptedSeed, options)
