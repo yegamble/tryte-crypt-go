@@ -1,4 +1,6 @@
 # tryte-crypt-go
+Disclaimer: DO NOT Send Your Crypto to seeds generated with this program. Only use IOTA Foundation apps or generate your seed offline.
+
 GoLang package that encrypts tryte strings, including for IOTA private seeds. This is based on [vbakke's tryte-encrypt library](https://github.com/vbakke/tryte-encrypt) that was written in JavaScript.
 
 This package is not fully standardised to vbakke's library, notably CTR mode is not used due to some issues decoding keys, GCM is used instead.
