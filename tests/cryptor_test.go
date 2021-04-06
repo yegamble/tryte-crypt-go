@@ -122,7 +122,7 @@ func TestNegativeNumbersEncrypting(t *testing.T) {
 
 func TestWrongSeed(t *testing.T) {
 
-	for i := 0; i < 5; i++ {
+	for i := 0; i < 9; i++ {
 		tryteString, err := tryteCipher.GenerateRandomSeed()
 		if err != nil {
 			log.Println(err)
