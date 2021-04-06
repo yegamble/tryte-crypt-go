@@ -165,7 +165,7 @@ func TestIfSeedIsCorrect(t *testing.T) {
 		//var options scryptOptions
 		run, err := tryteCipher.Encrypt(test, "qwerty123456", defaultOptions, i)
 		if err != nil {
-			log.Fatal(err)
+			log.Println(err)
 			t.Fail()
 		}
 		log.Println("Encrypted: " + run)
@@ -174,7 +174,7 @@ func TestIfSeedIsCorrect(t *testing.T) {
 
 		run2, err := tryteCipher.Decrypt(run, "qwerty123456", defaultOptions)
 		if err != nil {
-			log.Fatal(err)
+			log.Println(err)
 			t.Fail()
 		}
 
@@ -183,6 +183,7 @@ func TestIfSeedIsCorrect(t *testing.T) {
 
 		if strings.Compare(tryteString, run2) != 0 {
 			log.Println("Test Failed")
+			t.Fail()
 		} else if strings.Compare(tryteString, run2) == 0 {
 			log.Println("Test Passed")
 		}
