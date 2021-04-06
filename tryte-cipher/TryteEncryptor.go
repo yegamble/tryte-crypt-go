@@ -69,7 +69,7 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 		options.N = int(math.Pow(2, float64(toughnessInput+14)))
 		options.R = 8 + toughnessInput
 		options.P = 8 + toughnessInput
-		options.KeyLen = 16
+		options.KeyLen = 32
 	}
 
 	if toughnessInput > 9 {
