@@ -99,13 +99,11 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 
 	log.Println("seed converted to bytes")
 
-	aesGCM, err := CreateAESCryptor(passphrase, options)
+	encryptedSeedBytes, err := CreateAESCryptor(seedBytes, passphrase, options)
 	if err != nil {
 		return "", err
 	}
 
-	nonce := make([]byte, aesGCM.NonceSize())
-	encryptedSeedBytes := aesGCM.Seal(seedBytes[:0], nonce, seedBytes, nil)
 	log.Println("seed encrypted, now converting to ASCII")
 
 	encryptedSeedTrytes, err := converter.ASCIIToTrytes(hex.EncodeToString(encryptedSeedBytes))
@@ -128,7 +126,7 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 }
 
 //initialise Cipher with passphrase and options set in ScryptOptions struct
-func CreateAESCryptor(passphrase string, option ScryptOptions) (cipher.AEAD, error) {
+func CreateAESCryptor(seedBytes []byte, passphrase string, option ScryptOptions) ([]byte, error) {
 
 	passphraseBytes := []byte(passphrase)
 	hashedPassphrase := sha256.New().Sum(sha256.New().Sum(passphraseBytes))
@@ -148,5 +146,9 @@ func CreateAESCryptor(passphrase string, option ScryptOptions) (cipher.AEAD, err
 		return nil, err
 	}
 
-	return aesGCM, nil
+	nonce := make([]byte, aesGCM.NonceSize())
+
+	encryptedByteSeed := aesGCM.Seal(seedBytes[:0], nonce, seedBytes, nil)
+
+	return encryptedByteSeed, nil
 }
