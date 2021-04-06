@@ -19,12 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="add aesGCM.NonceSize() to nonce byte">
-      <change beforePath="$PROJECT_DIR$/.docker_push" beforeDir="false" />
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="refactor AES Cryptor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MakeFile" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +160,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update comments." />
     <MESSAGE value="remove extra filter that prevented difficulty from being read." />
     <MESSAGE value="update readme" />
     <MESSAGE value="limit toughness/encryption difficulty to 20" />
@@ -189,7 +184,8 @@
     <MESSAGE value="update key length to 32 in encryptor" />
     <MESSAGE value="raise test to nine." />
     <MESSAGE value="add aesGCM.NonceSize() to nonce byte" />
-    <option name="LAST_COMMIT_MESSAGE" value="add aesGCM.NonceSize() to nonce byte" />
+    <MESSAGE value="Revert &quot;refactor AES Cryptor&quot;&#10;&#10;This reverts commit 27be5425" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;refactor AES Cryptor&quot;&#10;&#10;This reverts commit 27be5425" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -215,6 +211,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="466" y="323" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.877@0.23.1440.877" timestamp="1617610302062" />
+    <state x="267" y="34" key="CommitChangelistDialog2" timestamp="1617684820540">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="267" y="34" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1617684820540" />
     <state x="99" y="123" width="1240" height="677" key="DiffContextDialog" timestamp="1617676074292">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -231,22 +231,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
-    <state width="1398" height="347" key="GridCell.Tab.0.bottom" timestamp="1617683143372">
+    <state width="1398" height="173" key="GridCell.Tab.0.bottom" timestamp="1617684831076">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="347" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617683143372" />
-    <state width="1398" height="347" key="GridCell.Tab.0.center" timestamp="1617683143371">
+    <state width="1398" height="173" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617684831076" />
+    <state width="1398" height="173" key="GridCell.Tab.0.center" timestamp="1617684831075">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="347" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617683143371" />
-    <state width="1398" height="347" key="GridCell.Tab.0.left" timestamp="1617683143370">
+    <state width="1398" height="173" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617684831075" />
+    <state width="1398" height="173" key="GridCell.Tab.0.left" timestamp="1617684831075">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="347" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617683143370" />
-    <state width="1398" height="347" key="GridCell.Tab.0.right" timestamp="1617683143371">
+    <state width="1398" height="173" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617684831075" />
+    <state width="1398" height="173" key="GridCell.Tab.0.right" timestamp="1617684831075">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="347" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617683143371" />
+    <state width="1398" height="173" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617684831075" />
     <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1617676559898">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -271,10 +271,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617683244571">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617684821933">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617683244571" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617684821933" />
     <state width="720" height="438" key="XDebugger.FullValuePopup" timestamp="1617675771276">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

@@ -12,16 +12,6 @@ import (
 var seed trinary.Trytes
 var defaultOptions tryteCipher.ScryptOptions
 
-type tests struct {
-	seed       string
-	passphrase string
-	options    tryteCipher.ScryptOptions
-}
-
-func init() {
-
-}
-
 func TestMissingPassphraseEncryption(t *testing.T) {
 
 	tryteString, err := tryteCipher.GenerateRandomSeed()
