@@ -28,7 +28,7 @@ func Decrypt(encryptedSeed trinary.Trytes, passphrase string, options ScryptOpti
 		return "", err
 	}
 
-	nonce := make([]byte, 12)
+	nonce := make([]byte, aesGCM.NonceSize())
 	openSeed, err := aesGCM.Open(nil, nonce, encryptedSeedBytes, nil)
 	if err != nil {
 		return "", err
