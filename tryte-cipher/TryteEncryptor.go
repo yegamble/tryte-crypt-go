@@ -105,7 +105,7 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 	}
 
 	nonce := make([]byte, aesGCM.NonceSize())
-	encryptedSeedBytes := aesGCM.Seal(nil, nonce, seedBytes, nil)
+	encryptedSeedBytes := aesGCM.Seal(seedBytes[:0], nonce, seedBytes, nil)
 	log.Println("seed encrypted, now converting to ASCII")
 
 	encryptedSeedTrytes, err := converter.ASCIIToTrytes(hex.EncodeToString(encryptedSeedBytes))
