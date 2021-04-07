@@ -4,6 +4,8 @@ import (
 	"github.com/iotaledger/iota.go/trinary"
 	tryteCipher "github.com/yegamble/tryte-crypt-go/tryte-cipher"
 	"log"
+	"math"
+	"math/rand"
 	"strconv"
 	"strings"
 	"testing"
@@ -123,7 +125,6 @@ func TestNegativeNumbersEncrypting(t *testing.T) {
 	}
 
 	test, err := trinary.NewTrytes(tryteString)
-
 
 	_, err = tryteCipher.Encrypt(test, passphrase, defaultOptions, -1)
 	if err != nil {
@@ -264,4 +265,60 @@ func TestIfSeedIsCorrect(t *testing.T) {
 		}
 	}
 
+}
+
+func TestNegativeDifficulty(t *testing.T) {
+	passphrase, err := tryteCipher.RandomPassphraseGenerator(64)
+	if err != nil || passphrase == "" {
+		// Serve an appropriately vague error to the
+		// user, but log the details internally.
+		log.Println("Test Failed")
+		t.Fail()
+	}
+
+	log.Println("Passphrase: " + passphrase)
+
+	tryteString, err := tryteCipher.GenerateRandomSeed()
+	if err != nil {
+		log.Println(err)
+		t.Fail()
+	}
+
+	test, err := trinary.NewTrytes(tryteString)
+
+	//var options scryptOptions
+	_, err = tryteCipher.Encrypt(test, passphrase, defaultOptions, rand.Intn(5)*-1)
+	if err != nil {
+		log.Println(err)
+	} else {
+		t.Fail()
+	}
+}
+
+func TestDifficultyAboveNine(t *testing.T) {
+	passphrase, err := tryteCipher.RandomPassphraseGenerator(64)
+	if err != nil || passphrase == "" {
+		// Serve an appropriately vague error to the
+		// user, but log the details internally.
+		log.Println("Test Failed")
+		t.Fail()
+	}
+
+	log.Println("Passphrase: " + passphrase)
+
+	tryteString, err := tryteCipher.GenerateRandomSeed()
+	if err != nil {
+		log.Println(err)
+		t.Fail()
+	}
+
+	test, err := trinary.NewTrytes(tryteString)
+
+	//var options scryptOptions
+	_, err = tryteCipher.Encrypt(test, passphrase, defaultOptions, int(math.Max(float64(rand.Intn(100)), 9)))
+	if err != nil {
+		log.Println(err)
+	} else {
+		t.Fail()
+	}
 }

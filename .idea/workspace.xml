@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="clean returns in seed generator">
-      <change beforePath="$PROJECT_DIR$/tryte-cipher/TryteDecryptor.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/TryteDecryptor.go" afterDir="false" />
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="combine two error messages for encryption difficulty.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/cryptor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cryptor_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +75,8 @@
       <recent name="$PROJECT_DIR$/handler" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests">
-    <configuration name="TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.go test github.com/yegamble/tryte-crypt-go/tests">
+    <configuration name="TestDifficultyAboveNine in github.com/yegamble/tryte-crypt-go/tests (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tryte-crypt-go" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <framework value="gotest" />
@@ -83,7 +84,18 @@
       <package value="github.com/yegamble/tryte-crypt-go/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestIfSeedIsCorrect\E$" />
+      <pattern value="^\QTestDifficultyAboveNine\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestDifficultyAboveNine in github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tryte-crypt-go" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/yegamble/tryte-crypt-go/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestDifficultyAboveNine\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -97,7 +109,7 @@
       <pattern value="^\QTestIfSeedIsCorrect\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestNegativeDifficulty in github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tryte-crypt-go" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <framework value="gotest" />
@@ -105,10 +117,10 @@
       <package value="github.com/yegamble/tryte-crypt-go/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestRandomPassphraseGenerator\E$" />
+      <pattern value="^\QTestNegativeDifficulty\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go test github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tryte-crypt-go" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <framework value="gotest" />
@@ -116,27 +128,15 @@
       <package value="github.com/yegamble/tryte-crypt-go/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestRandomPassphraseGenerator\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="tryte-crypt-go" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/yegamble/tryte-crypt-go/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestRandomPassphraseGenerator\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.go test github.com/yegamble/tryte-crypt-go/tests" />
+        <item itemvalue="Go Test.TestDifficultyAboveNine in github.com/yegamble/tryte-crypt-go/tests" />
+        <item itemvalue="Go Test.TestDifficultyAboveNine in github.com/yegamble/tryte-crypt-go/tests (1)" />
+        <item itemvalue="Go Test.TestNegativeDifficulty in github.com/yegamble/tryte-crypt-go/tests" />
         <item itemvalue="Go Test.TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests" />
-        <item itemvalue="Go Test.TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests (2)" />
-        <item itemvalue="Go Test.TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests (1)" />
-        <item itemvalue="Go Test.TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests" />
-        <item itemvalue="Go Test.TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +167,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="prompt for seed generation in cmd.go" />
     <MESSAGE value="show Generated Seed to User." />
     <MESSAGE value="double sha encryption" />
     <MESSAGE value="update status bad request in handler for error returns" />
@@ -192,7 +191,8 @@
     <MESSAGE value="clean up return functions in Encryptor" />
     <MESSAGE value="clean up seed generator returns" />
     <MESSAGE value="clean returns in seed generator" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean returns in seed generator" />
+    <MESSAGE value="combine two error messages for encryption difficulty." />
+    <option name="LAST_COMMIT_MESSAGE" value="combine two error messages for encryption difficulty." />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -238,22 +238,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
-    <state width="699" height="191" key="GridCell.Tab.0.bottom" timestamp="1617808600631">
+    <state width="699" height="191" key="GridCell.Tab.0.bottom" timestamp="1617814695613">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="191" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617808600631" />
-    <state width="699" height="191" key="GridCell.Tab.0.center" timestamp="1617808600631">
+    <state width="699" height="191" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617814695613" />
+    <state width="699" height="191" key="GridCell.Tab.0.center" timestamp="1617814695612">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="191" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617808600631" />
-    <state width="699" height="191" key="GridCell.Tab.0.left" timestamp="1617808600631">
+    <state width="699" height="191" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617814695612" />
+    <state width="699" height="191" key="GridCell.Tab.0.left" timestamp="1617814695612">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="191" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617808600631" />
-    <state width="699" height="191" key="GridCell.Tab.0.right" timestamp="1617808600631">
+    <state width="699" height="191" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617814695612" />
+    <state width="699" height="191" key="GridCell.Tab.0.right" timestamp="1617814695613">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="191" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617808600631" />
+    <state width="699" height="191" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617814695613" />
     <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1617676559898">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -297,5 +297,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tryte_crypt_go$TestIfSeedIsCorrect_in_github_com_yegamble_tryte_crypt_go_tests.out" NAME="TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests Coverage Results" MODIFIED="1617775797313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/tryte_crypt_go$TestDifficultyAboveNine_in_github_com_yegamble_tryte_crypt_go_tests__1_.out" NAME="TestDifficultyAboveNine in github.com/yegamble/tryte-crypt-go/tests (1) Coverage Results" MODIFIED="1617814624545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/tryte_crypt_go$TestDifficultyAboveNine_in_github_com_yegamble_tryte_crypt_go_tests.out" NAME="TestDifficultyAboveNine in github.com/yegamble/tryte-crypt-go/tests Coverage Results" MODIFIED="1617814637016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/tryte_crypt_go$go_test_github_com_yegamble_tryte_crypt_go_tests.out" NAME="go test github.com/yegamble/tryte-crypt-go/tests Coverage Results" MODIFIED="1617814695519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
