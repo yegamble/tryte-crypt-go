@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go?ref=badge_large)
+
 # tryte-crypt-go
 Disclaimer: DO NOT Send Your Crypto to seeds generated with this program. Only use IOTA Foundation apps or generate your seed offline.
 
