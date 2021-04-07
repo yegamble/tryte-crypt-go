@@ -1,6 +1,8 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go?ref=badge_large)
 
 # tryte-crypt-go
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go?ref=badge_shield)
+
 Disclaimer: DO NOT Send Your Crypto to seeds generated with this program. Only use IOTA Foundation apps or generate your seed offline.
 
 This GoLang package encrypts tryte strings, including for IOTA private seeds. This is based on [vbakke's tryte-encrypt library](https://github.com/vbakke/tryte-encrypt) that was written in JavaScript.
@@ -49,3 +51,7 @@ passphrase string \
 difficulty int 
 
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go?ref=badge_large)
