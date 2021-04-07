@@ -36,17 +36,10 @@ The following enpdoints for this application, /encrypt and /decrypt each expect 
 
 <img width="1395" alt="image" src="https://user-images.githubusercontent.com/9465387/113575799-8c58cc80-9672-11eb-98ae-4a71b478d848.png">
 
-### /encrypt
-seed string \
-passphrase  string \
-difficulty integer 
-
-### /decrypt
-seed string \
-passphrase  string 
-
-### /generate
-passphrase string \
-difficulty int 
+| Endpoint  | Form Data                                                           |                                                                                                          
+| :---------| :-------------------------------------------------------------------|
+| /encrypt  | **seed:** string, **passphrase:** string, **difficulty:** integer   | 
+| /decrypt  | **seed:** string, **passphrease:** string                           |                                                                                                          
+| /generate | **passphrease:** string, **difficulty:** string                     |                                                                                                             
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go?ref=badge_large)
