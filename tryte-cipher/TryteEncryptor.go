@@ -1,6 +1,7 @@
 package tryte_cipher
 
 import (
+	"bytes"
 	"crypto/aes"
 	"crypto/cipher"
 	"crypto/sha256"
@@ -8,7 +9,11 @@ import (
 	"errors"
 	"github.com/iotaledger/iota.go/converter"
 	"github.com/iotaledger/iota.go/trinary"
+	"golang.org/x/crypto/openpgp"
+	"golang.org/x/crypto/openpgp/armor"
+	"golang.org/x/crypto/openpgp/packet"
 	"golang.org/x/crypto/scrypt"
+	"io/ioutil"
 	"log"
 	"math"
 	"strconv"
@@ -128,25 +133,88 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 }
 
 //initialise Cipher with passphrase and options set in ScryptOptions struct
-func CreateAESCryptor(passphrase string, option ScryptOptions) (cipher.AEAD, error) {
+func CreateAESCryptor(passphrase string, option ScryptOptions) (aesGCM cipher.AEAD, err error) {
 
 	passphraseBytes := []byte(passphrase)
 	hashedPassphrase := sha256.New().Sum(sha256.New().Sum(passphraseBytes))
 
 	encryptionKey, err := scrypt.Key(passphraseBytes, hashedPassphrase, option.N, option.R, option.P, option.KeyLen)
 	if err != nil {
-		return nil, err
+		return
 	}
 
 	block, err := aes.NewCipher(encryptionKey)
 	if err != nil {
-		return nil, err
+		return
 	}
 
-	aesGCM, err := cipher.NewGCM(block)
+	aesGCM, err = cipher.NewGCM(block)
 	if err != nil {
-		return nil, err
+		return
 	}
 
-	return aesGCM, nil
+	return
+}
+
+//PGP Encrypt, in case the need for local storage of private key
+func RSAEncrypt(plaintext []byte, password []byte, packetConfig *packet.Config) (ciphertext []byte, err error) {
+
+	encbuf := bytes.NewBuffer(nil)
+
+	w, err := armor.Encode(encbuf, "PGP MESSAGE", nil)
+	if err != nil {
+		return
+	}
+	defer w.Close()
+
+	pt, err := openpgp.SymmetricallyEncrypt(w, password, nil, packetConfig)
+	if err != nil {
+		return
+	}
+	defer pt.Close()
+
+	_, err = pt.Write(plaintext)
+	if err != nil {
+		return
+	}
+
+	// Close writers to force-flush their buffer
+	pt.Close()
+	w.Close()
+	ciphertext = encbuf.Bytes()
+
+	return
+}
+
+func RSADecrypt(ciphertext []byte, password []byte, packetConfig *packet.Config) (plaintext []byte, err error) {
+	decbuf := bytes.NewBuffer(ciphertext)
+
+	armorBlock, err := armor.Decode(decbuf)
+	if err != nil {
+		return
+	}
+
+	failed := false
+	prompt := func(keys []openpgp.Key, symmetric bool) ([]byte, error) {
+		// If the given passphrase isn't correct, the function will be called again, forever.
+		// This method will fail fast.
+		// Ref: https://godoc.org/golang.org/x/crypto/openpgp#PromptFunction
+		if failed {
+			return nil, errors.New("decryption failed")
+		}
+		failed = true
+		return password, nil
+	}
+
+	md, err := openpgp.ReadMessage(armorBlock.Body, nil, prompt, packetConfig)
+	if err != nil {
+		return
+	}
+
+	plaintext, err = ioutil.ReadAll(md.UnverifiedBody)
+	if err != nil {
+		return
+	}
+
+	return
 }

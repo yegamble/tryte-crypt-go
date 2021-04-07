@@ -3,6 +3,7 @@ module github.com/yegamble/tryte-crypt-go
 go 1.15
 
 require (
+	github.com/GoKillers/libsodium-go v0.0.0-20171022220152-dd733721c3cb // indirect
 	github.com/cosmtrek/air v1.21.2 // indirect
 	github.com/creack/pty v1.1.11 // indirect
 	github.com/fatih/color v1.10.0 // indirect
