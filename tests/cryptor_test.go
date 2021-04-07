@@ -124,7 +124,7 @@ func TestNegativeNumbersEncrypting(t *testing.T) {
 
 	test, err := trinary.NewTrytes(tryteString)
 
-	//var options scryptOptions
+
 	_, err = tryteCipher.Encrypt(test, passphrase, defaultOptions, -1)
 	if err != nil {
 		log.Println("Test Passed")
