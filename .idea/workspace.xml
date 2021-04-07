@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="Remove unused code in tests">
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="Add RandomPassphraseGenerator is seedGenerator.go and accompanying tests to ensure that at least 8 bytes are generated. This ensures that the seeds generated are secured by a long enough password if the developer wants does not want to provide a passphrase.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/cryptor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cryptor_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tryte-cipher/seedGenerator.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/seedGenerator.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,11 @@
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.15.5/libexec" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1qgp7rOSGs6jZmIJORj8b6vPdDH" />
@@ -50,6 +54,7 @@
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="ToolWindowCoverage.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
@@ -163,8 +168,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update readme" />
-    <MESSAGE value="limit toughness/encryption difficulty to 20" />
     <MESSAGE value="add seed generator." />
     <MESSAGE value="fix README.md" />
     <MESSAGE value="encryption difficulty capped at 9" />
@@ -188,7 +191,9 @@
     <MESSAGE value="add aesGCM.NonceSize() to nonce byte" />
     <MESSAGE value="Revert &quot;refactor AES Cryptor&quot;&#10;&#10;This reverts commit 27be5425" />
     <MESSAGE value="Remove unused code in tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused code in tests" />
+    <MESSAGE value="Add RandomPassphraseGenerator is seedGenerator.go and accompanying tests to ensure that at least 8 bytes are generated. This ensures that the seeds generated are secured by a long enough password." />
+    <MESSAGE value="Add RandomPassphraseGenerator is seedGenerator.go and accompanying tests to ensure that at least 8 bytes are generated. This ensures that the seeds generated are secured by a long enough password if the developer wants does not want to provide a passphrase." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add RandomPassphraseGenerator is seedGenerator.go and accompanying tests to ensure that at least 8 bytes are generated. This ensures that the seeds generated are secured by a long enough password if the developer wants does not want to provide a passphrase." />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -234,22 +239,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
-    <state width="1398" height="182" key="GridCell.Tab.0.bottom" timestamp="1617774712064">
+    <state width="1398" height="182" key="GridCell.Tab.0.bottom" timestamp="1617775077814">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="182" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617774712064" />
-    <state width="1398" height="182" key="GridCell.Tab.0.center" timestamp="1617774712063">
+    <state width="1398" height="182" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617775077814" />
+    <state width="1398" height="182" key="GridCell.Tab.0.center" timestamp="1617775077814">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="182" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617774712063" />
-    <state width="1398" height="182" key="GridCell.Tab.0.left" timestamp="1617774712063">
+    <state width="1398" height="182" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617775077814" />
+    <state width="1398" height="182" key="GridCell.Tab.0.left" timestamp="1617775077813">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="182" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617774712063" />
-    <state width="1398" height="182" key="GridCell.Tab.0.right" timestamp="1617774712064">
+    <state width="1398" height="182" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617775077813" />
+    <state width="1398" height="182" key="GridCell.Tab.0.right" timestamp="1617775077814">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="182" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617774712064" />
+    <state width="1398" height="182" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617775077814" />
     <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1617676559898">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -274,10 +279,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617685918900">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617774997695">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617685918900" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617774997695" />
     <state width="720" height="438" key="XDebugger.FullValuePopup" timestamp="1617675771276">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -290,5 +295,8 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1617617497401" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tryte_crypt_go$TestIfSeedIsCorrect_in_github_com_yegamble_tryte_crypt_go_tests.out" NAME="TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests Coverage Results" MODIFIED="1617775077794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

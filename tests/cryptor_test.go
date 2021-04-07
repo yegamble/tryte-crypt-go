@@ -41,10 +41,18 @@ func TestMissingPassphraseDecryption(t *testing.T) {
 		t.Fail()
 	}
 
+	passphrase, err := tryteCipher.RandomPassphraseGenerator(64)
+	if err != nil || passphrase == "" {
+		// Serve an appropriately vague error to the
+		// user, but log the details internally.
+		log.Println("Test Failed")
+		t.Fail()
+	}
+
 	testSeed, err := trinary.NewTrytes(tryteString)
 
 	//var options scryptOptions
-	run, err := tryteCipher.Encrypt(testSeed, "qwerty123456", defaultOptions, 0)
+	run, err := tryteCipher.Encrypt(testSeed, passphrase, defaultOptions, 0)
 	if err != nil {
 		log.Println("Test Passed")
 	}
@@ -79,10 +87,18 @@ func TestNegativeNumbersDecrypting(t *testing.T) {
 		t.Fail()
 	}
 
+	passphrase, err := tryteCipher.RandomPassphraseGenerator(64)
+	if err != nil || passphrase == "" {
+		// Serve an appropriately vague error to the
+		// user, but log the details internally.
+		log.Println("Test Failed")
+		t.Fail()
+	}
+
 	test, err := trinary.NewTrytes(tryteString)
 
 	//var options scryptOptions
-	_, err = tryteCipher.Encrypt(test, "qwerty123456", defaultOptions, -1)
+	_, err = tryteCipher.Encrypt(test, passphrase, defaultOptions, -1)
 	if err != nil {
 		log.Println("Test Passed")
 	} else {
@@ -98,10 +114,18 @@ func TestNegativeNumbersEncrypting(t *testing.T) {
 		t.Fail()
 	}
 
+	passphrase, err := tryteCipher.RandomPassphraseGenerator(64)
+	if err != nil || passphrase == "" {
+		// Serve an appropriately vague error to the
+		// user, but log the details internally.
+		log.Println("Test Failed")
+		t.Fail()
+	}
+
 	test, err := trinary.NewTrytes(tryteString)
 
 	//var options scryptOptions
-	_, err = tryteCipher.Encrypt(test, "qwerty123456", defaultOptions, -1)
+	_, err = tryteCipher.Encrypt(test, passphrase, defaultOptions, -1)
 	if err != nil {
 		log.Println("Test Passed")
 	} else {
@@ -120,10 +144,20 @@ func TestWrongSeed(t *testing.T) {
 			t.Fail()
 		}
 
+		passphrase, err := tryteCipher.RandomPassphraseGenerator(64)
+		if err != nil || passphrase == "" {
+			// Serve an appropriately vague error to the
+			// user, but log the details internally.
+			log.Println("Test Failed")
+			t.Fail()
+		}
+
+		log.Println("Passphrase: " + passphrase)
+
 		test, err := trinary.NewTrytes(tryteString)
 
 		//var options scryptOptions
-		run, err := tryteCipher.Encrypt(test, "qwerty123456", defaultOptions, i)
+		run, err := tryteCipher.Encrypt(test, passphrase, defaultOptions, i)
 		if err != nil {
 			log.Fatal(err)
 			t.Fail()
@@ -133,7 +167,7 @@ func TestWrongSeed(t *testing.T) {
 		start := time.Now()
 
 		wrongSeed := "PCCBXAZAUCQCABBBAB9BRCUCRCABQCXAZASCUCUATCUCRCABRCUAXAYAQCSCUAPCRCBBYAVAQCTCPCABXAPCVABBVAQCZASCUAYAZATCYA9B9BUAPCWAABBBRCYAUCCBUCTCZAYAPCTCABBBTCZAWA9BYA9BTCCBYAUCXAQCVAVACBYAXAVAYAPCUCWABBBBVAWACBABQCCBYAUCZABBPCWAXA9BBBUCYAVAWAABUASCXAYAQCUCCBZAUABBQCYATCYA:T2"
-		run2, err := tryteCipher.Decrypt(wrongSeed, "qwerty123456", defaultOptions)
+		run2, err := tryteCipher.Decrypt(wrongSeed, passphrase, defaultOptions)
 		if err != nil {
 			log.Println(err)
 		} else {
