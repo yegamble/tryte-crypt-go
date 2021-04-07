@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="clean up return functions in Encryptor">
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="clean up seed generator returns">
       <change beforePath="$PROJECT_DIR$/tryte-cipher/seedGenerator.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/seedGenerator.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +167,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="encryption difficulty capped at 9" />
     <MESSAGE value="add cmd.go for text entry" />
     <MESSAGE value="prompt for seed generation in cmd.go" />
     <MESSAGE value="show Generated Seed to User." />
@@ -192,7 +191,8 @@
     <MESSAGE value="Add RandomPassphraseGenerator is seedGenerator.go and accompanying tests to ensure that at least 8 bytes are generated. This ensures that the seeds generated are secured by a long enough password if the developer wants does not want to provide a passphrase." />
     <MESSAGE value="add random passphrase generator to more tests." />
     <MESSAGE value="clean up return functions in Encryptor" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up return functions in Encryptor" />
+    <MESSAGE value="clean up seed generator returns" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up seed generator returns" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -278,10 +278,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617807943549">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617808276337">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617807943549" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617808276337" />
     <state width="720" height="438" key="XDebugger.FullValuePopup" timestamp="1617675771276">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
