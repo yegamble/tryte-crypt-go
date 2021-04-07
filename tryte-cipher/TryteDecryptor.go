@@ -10,37 +10,37 @@ import (
 )
 
 //Decrypt an Encrypted Tryte Seed
-func Decrypt(encryptedSeed trinary.Trytes, passphrase string, options ScryptOptions) (trinary.Trytes, error) {
+func Decrypt(encryptedSeed trinary.Trytes, passphrase string, options ScryptOptions) (tryteDecryptedSeed trinary.Trytes, err error) {
 
 	options.N, options = getToughnessFromSeed(&encryptedSeed, options)
 
 	asciiEncryptedSeed, err := converter.TrytesToASCII(encryptedSeed)
 	if err != nil {
-		return "", err
+		return
 	}
 
 	encryptedSeedBytes, err := hex.DecodeString(asciiEncryptedSeed)
 	if err != nil {
-		return "", err
+		return
 	}
 
 	aesGCM, err := CreateAESCryptor(passphrase, options)
 	if err != nil {
-		return "", err
+		return
 	}
 
 	nonce := make([]byte, aesGCM.NonceSize())
 	openSeed, err := aesGCM.Open(nil, nonce, encryptedSeedBytes, nil)
 	if err != nil {
-		return "", err
+		return
 	}
 
-	tryteDecryptedSeed, err := trinary.BytesToTrytes(openSeed, 81)
+	tryteDecryptedSeed, err = trinary.BytesToTrytes(openSeed, 81)
 	if err != nil {
-		return "", err
+		return
 	}
 
-	return tryteDecryptedSeed, nil
+	return
 }
 
 //find the difficulty within the string seed
