@@ -27,41 +27,44 @@ type ScryptOptions struct {
 var loggingTime time.Time
 
 //Determine if the toughness level should be printed in the encrypted seed
-func ToughnessSetting(n int) (string, error) {
+func ToughnessSetting(n int) (toughness string, err error) {
 
-	toughness, err := FindPowerOfNToughness(n)
+	toughnessInt, err := FindPowerOfNToughness(n)
 	if err != nil {
-		return "", err
+		return
 	}
 
-	if toughness > 0 {
-		return ":T" + strconv.Itoa(toughness), nil
+	if toughnessInt > 0 {
+		toughness = ":T" + strconv.Itoa(toughnessInt)
 	}
-	return "", nil
+
+	return
 }
 
 //Calculate the number of bits based on user input that is greater than 0
-func FindPowerOfNToughness(n int) (int, error) {
+func FindPowerOfNToughness(n int) (bits int, err error) {
 
 	if n%2 != 0 {
-		return 0, errors.New("number is not a power of 2")
+		err = errors.New("number is not a power of 2")
+		return
 	}
 
 	for i := 0; i < n; i++ {
 
 		if int(math.Pow(2, float64(i))) == n {
-			return i - 14, nil
+			bits = i - 14
+			return
 		}
 
 	}
-	return -1, nil
+	return
 }
 
 //Encrypt tryte string using AES
 // the passphrase comes from scrypt, based on the SHA256 hash of the passphrase.
 // takes seed Tryte, passphrase of any string, optional ScryptOptions struct
 //Alternatively toughnessInput will calculate the required settings for AES
-func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toughnessInput int) (string, error) {
+func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toughnessInput int) (result string, err error) {
 	loggingTime = time.Now()
 
 	//Default Options for AES
@@ -73,35 +76,40 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 	}
 
 	if toughnessInput > 9 {
-		return "", errors.New("encryption difficulty cannot exceed 9")
+		err = errors.New("encryption difficulty cannot exceed 9")
+		return
 	}
 
 	if toughnessInput < 0 {
-		return "", errors.New("encryption difficulty cannot be negative")
+		err = errors.New("encryption difficulty cannot be negative")
+		return
 	}
 
 	if options.N < 0 {
-		return "", errors.New("encryption difficulty cannot be negative")
+		err = errors.New("encryption difficulty cannot be negative")
+		return
 	}
 
 	if seed == "" {
-		return "", errors.New("seed is required")
+		err = errors.New("seed is required")
+		return
 	}
 
 	if passphrase == "" {
-		return "", errors.New("passphrase is required")
+		err = errors.New("passphrase is required")
+		return
 	}
 
 	seedBytes, err := trinary.TrytesToBytes(seed)
 	if err != nil {
-		return "", err
+		return
 	}
 
 	log.Println("seed converted to bytes")
 
 	aesGCM, err := CreateAESCryptor(passphrase, options)
 	if err != nil {
-		return "", err
+		return
 	}
 
 	nonce := make([]byte, aesGCM.NonceSize())
@@ -110,43 +118,45 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 
 	encryptedSeedTrytes, err := converter.ASCIIToTrytes(hex.EncodeToString(encryptedSeedBytes))
 	if err != nil {
-		return "", err
+		return
 	}
 	log.Println(time.Since(loggingTime))
 
 	err = trinary.ValidTrytes(encryptedSeedTrytes)
 	if err != nil {
-		return "", err
+		return
 	}
 
 	toughness, err := ToughnessSetting(options.N)
 	if err != nil {
-		return "", err
+		return
 	}
 
-	return encryptedSeedTrytes + toughness, nil
+	result = encryptedSeedTrytes + toughness
+
+	return
 }
 
 //initialise Cipher with passphrase and options set in ScryptOptions struct
-func CreateAESCryptor(passphrase string, option ScryptOptions) (cipher.AEAD, error) {
+func CreateAESCryptor(passphrase string, option ScryptOptions) (aesGCM cipher.AEAD, err error) {
 
 	passphraseBytes := []byte(passphrase)
 	hashedPassphrase := sha256.New().Sum(sha256.New().Sum(passphraseBytes))
 
 	encryptionKey, err := scrypt.Key(passphraseBytes, hashedPassphrase, option.N, option.R, option.P, option.KeyLen)
 	if err != nil {
-		return nil, err
+		return
 	}
 
 	block, err := aes.NewCipher(encryptionKey)
 	if err != nil {
-		return nil, err
+		return
 	}
 
-	aesGCM, err := cipher.NewGCM(block)
+	aesGCM, err = cipher.NewGCM(block)
 	if err != nil {
-		return nil, err
+		return
 	}
 
-	return aesGCM, nil
+	return
 }

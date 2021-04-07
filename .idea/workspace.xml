@@ -133,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests" />
         <item itemvalue="Go Test.TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests (2)" />
         <item itemvalue="Go Test.TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests (1)" />
         <item itemvalue="Go Test.TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests" />
         <item itemvalue="Go Test.TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests (2)" />
-        <item itemvalue="Go Test.TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests" />
       </list>
     </recent_temporary>
   </component>
@@ -239,22 +239,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
-    <state width="1398" height="182" key="GridCell.Tab.0.bottom" timestamp="1617776407021">
+    <state width="699" height="191" key="GridCell.Tab.0.bottom" timestamp="1617807465052">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="182" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617776407021" />
-    <state width="1398" height="182" key="GridCell.Tab.0.center" timestamp="1617776407021">
+    <state width="699" height="191" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617807465052" />
+    <state width="699" height="191" key="GridCell.Tab.0.center" timestamp="1617807465051">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="182" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617776407021" />
-    <state width="1398" height="182" key="GridCell.Tab.0.left" timestamp="1617776407020">
+    <state width="699" height="191" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617807465051" />
+    <state width="699" height="191" key="GridCell.Tab.0.left" timestamp="1617807465051">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="182" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617776407020" />
-    <state width="1398" height="182" key="GridCell.Tab.0.right" timestamp="1617776407021">
+    <state width="699" height="191" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617807465051" />
+    <state width="699" height="191" key="GridCell.Tab.0.right" timestamp="1617807465052">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="182" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617776407021" />
+    <state width="699" height="191" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617807465052" />
     <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1617676559898">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
