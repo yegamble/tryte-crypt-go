@@ -4,6 +4,7 @@ import (
 	"github.com/iotaledger/iota.go/trinary"
 	tryteCipher "github.com/yegamble/tryte-crypt-go/tryte-cipher"
 	"log"
+	"strconv"
 	"strings"
 	"testing"
 	"time"
@@ -151,9 +152,42 @@ func TestWrongSeed(t *testing.T) {
 
 }
 
+func TestRandomPassphraseGenerator(t *testing.T) {
+
+	for i := 1; i < 64; i++ {
+		passphrase, err := tryteCipher.RandomPassphraseGenerator(i)
+		if err != nil || passphrase == "" {
+
+			if i < 8 {
+				log.Println(err)
+				log.Println("Test Passed")
+			} else {
+				// Serve an appropriately vague error to the
+				// user, but log the details internally.
+				log.Println("Passphrase generator failed at iteration " + strconv.Itoa(i))
+				t.Fail()
+			}
+		}
+		log.Println(passphrase)
+	}
+
+	log.Println("Test Passed")
+}
+
 func TestIfSeedIsCorrect(t *testing.T) {
 
 	for i := 0; i < 5; i++ {
+
+		passphrase, err := tryteCipher.RandomPassphraseGenerator(64)
+		if err != nil || passphrase == "" {
+			// Serve an appropriately vague error to the
+			// user, but log the details internally.
+			log.Println("Test Failed")
+			t.Fail()
+		}
+
+		log.Println("Passphrase: " + passphrase)
+
 		tryteString, err := tryteCipher.GenerateRandomSeed()
 		if err != nil {
 			log.Println(err)
@@ -163,7 +197,7 @@ func TestIfSeedIsCorrect(t *testing.T) {
 		test, err := trinary.NewTrytes(tryteString)
 
 		//var options scryptOptions
-		run, err := tryteCipher.Encrypt(test, "qwerty123456", defaultOptions, i)
+		run, err := tryteCipher.Encrypt(test, passphrase, defaultOptions, i)
 		if err != nil {
 			log.Println(err)
 			t.Fail()
@@ -172,7 +206,7 @@ func TestIfSeedIsCorrect(t *testing.T) {
 
 		start := time.Now()
 
-		run2, err := tryteCipher.Decrypt(run, "qwerty123456", defaultOptions)
+		run2, err := tryteCipher.Decrypt(run, passphrase, defaultOptions)
 		if err != nil {
 			log.Println(err)
 			t.Fail()

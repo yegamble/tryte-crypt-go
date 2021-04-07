@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="refactor AES Cryptor">
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="Remove unused code in tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/cryptor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cryptor_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryte-cipher/seedGenerator.go" beforeDir="false" afterPath="$PROJECT_DIR$/tryte-cipher/seedGenerator.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,8 +70,8 @@
       <recent name="$PROJECT_DIR$/handler" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.go test github.com/yegamble/tryte-crypt-go/tests">
-    <configuration name="TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests">
+    <configuration name="TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tryte-crypt-go" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <framework value="gotest" />
@@ -91,7 +93,7 @@
       <pattern value="^\QTestIfSeedIsCorrect\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tryte-crypt-go" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <framework value="gotest" />
@@ -99,10 +101,10 @@
       <package value="github.com/yegamble/tryte-crypt-go/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestWrongSeed\E$" />
+      <pattern value="^\QTestRandomPassphraseGenerator\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (3)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tryte-crypt-go" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <framework value="gotest" />
@@ -110,10 +112,10 @@
       <package value="github.com/yegamble/tryte-crypt-go/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestWrongSeed\E$" />
+      <pattern value="^\QTestRandomPassphraseGenerator\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go test github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tryte-crypt-go" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <framework value="gotest" />
@@ -121,15 +123,16 @@
       <package value="github.com/yegamble/tryte-crypt-go/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestRandomPassphraseGenerator\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.go test github.com/yegamble/tryte-crypt-go/tests" />
-        <item itemvalue="Go Test.TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests (1)" />
         <item itemvalue="Go Test.TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests" />
-        <item itemvalue="Go Test.TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (3)" />
-        <item itemvalue="Go Test.TestWrongSeed in github.com/yegamble/tryte-crypt-go/tests (2)" />
+        <item itemvalue="Go Test.TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests (2)" />
+        <item itemvalue="Go Test.TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests (2)" />
+        <item itemvalue="Go Test.TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests (1)" />
+        <item itemvalue="Go Test.TestRandomPassphraseGenerator in github.com/yegamble/tryte-crypt-go/tests" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +163,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove extra filter that prevented difficulty from being read." />
     <MESSAGE value="update readme" />
     <MESSAGE value="limit toughness/encryption difficulty to 20" />
     <MESSAGE value="add seed generator." />
@@ -185,7 +187,8 @@
     <MESSAGE value="raise test to nine." />
     <MESSAGE value="add aesGCM.NonceSize() to nonce byte" />
     <MESSAGE value="Revert &quot;refactor AES Cryptor&quot;&#10;&#10;This reverts commit 27be5425" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;refactor AES Cryptor&quot;&#10;&#10;This reverts commit 27be5425" />
+    <MESSAGE value="Remove unused code in tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused code in tests" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -231,22 +234,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
-    <state width="1398" height="173" key="GridCell.Tab.0.bottom" timestamp="1617684831076">
+    <state width="1398" height="182" key="GridCell.Tab.0.bottom" timestamp="1617774712064">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="173" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617684831076" />
-    <state width="1398" height="173" key="GridCell.Tab.0.center" timestamp="1617684831075">
+    <state width="1398" height="182" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617774712064" />
+    <state width="1398" height="182" key="GridCell.Tab.0.center" timestamp="1617774712063">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="173" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617684831075" />
-    <state width="1398" height="173" key="GridCell.Tab.0.left" timestamp="1617684831075">
+    <state width="1398" height="182" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617774712063" />
+    <state width="1398" height="182" key="GridCell.Tab.0.left" timestamp="1617774712063">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="173" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617684831075" />
-    <state width="1398" height="173" key="GridCell.Tab.0.right" timestamp="1617684831075">
+    <state width="1398" height="182" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617774712063" />
+    <state width="1398" height="182" key="GridCell.Tab.0.right" timestamp="1617774712064">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="173" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617684831075" />
+    <state width="1398" height="182" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617774712064" />
     <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1617676559898">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -271,10 +274,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617684821933">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617685918900">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617684821933" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617685918900" />
     <state width="720" height="438" key="XDebugger.FullValuePopup" timestamp="1617675771276">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
