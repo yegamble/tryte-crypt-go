@@ -166,18 +166,25 @@ func TestWrongSeed(t *testing.T) {
 
 		start := time.Now()
 
-		wrongSeed := "PCCBXAZAUCQCABBBAB9BRCUCRCABQCXAZASCUCUATCUCRCABRCUAXAYAQCSCUAPCRCBBYAVAQCTCPCABXAPCVABBVAQCZASCUAYAZATCYA9B9BUAPCWAABBBRCYAUCCBUCTCZAYAPCTCABBBTCZAWA9BYA9BTCCBYAUCXAQCVAVACBYAXAVAYAPCUCWABBBBVAWACBABQCCBYAUCZABBPCWAXA9BBBUCYAVAWAABUASCXAYAQCUCCBZAUABBQCYATCYA:T2"
-		run2, err := tryteCipher.Decrypt(wrongSeed, passphrase, defaultOptions)
+		//var options scryptOptions
+		wrongSeed, err := tryteCipher.Encrypt(test, passphrase+"l", defaultOptions, i)
+		if err != nil {
+			log.Fatal(err)
+			t.Fail()
+		}
+		log.Println("Encrypted: " + wrongSeed)
+
+		run3, err := tryteCipher.Decrypt(wrongSeed, passphrase, defaultOptions)
 		if err != nil {
 			log.Println(err)
 		} else {
 			t.Fail()
 		}
 
-		if strings.Compare(tryteString, run2) != 0 {
+		if strings.Compare(tryteString, run3) != 0 {
 			log.Println("Test Pass")
-		} else if strings.Compare(tryteString, run2) == 0 {
-			log.Println("Decrypted: " + run2)
+		} else if strings.Compare(tryteString, run3) == 0 {
+			log.Println("Decrypted: " + run3)
 			log.Println(time.Since(start))
 			log.Println("Test Failed")
 			t.Fail()
