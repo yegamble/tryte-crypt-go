@@ -24,6 +24,8 @@ type ScryptOptions struct {
 	KeyLen int
 }
 
+var loggingTime time.Time
+
 //Determine if the toughness level should be printed in the encrypted seed
 func ToughnessSetting(n int) (string, error) {
 
@@ -37,8 +39,6 @@ func ToughnessSetting(n int) (string, error) {
 	}
 	return "", nil
 }
-
-var loggingTime time.Time
 
 //Calculate the number of bits based on user input that is greater than 0
 func FindPowerOfNToughness(n int) (int, error) {
