@@ -1,13 +1,13 @@
 package tryte_cipher
 
 import (
-	"crypto/aes"
 	"crypto/cipher"
 	"crypto/sha256"
 	"encoding/hex"
 	"errors"
 	"github.com/iotaledger/iota.go/converter"
 	"github.com/iotaledger/iota.go/trinary"
+	"golang.org/x/crypto/chacha20poly1305"
 	"golang.org/x/crypto/scrypt"
 	"log"
 	"math"
@@ -133,7 +133,7 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 }
 
 //initialise Cipher with passphrase and options set in ScryptOptions struct
-func CreateAESCryptor(passphrase string, option ScryptOptions) (aesGCM cipher.AEAD, err error) {
+func CreateAESCryptor(passphrase string, option ScryptOptions) (aesChacha2AEAD cipher.AEAD, err error) {
 
 	passphraseBytes := []byte(passphrase)
 	hashedPassphrase := sha256.New().Sum(sha256.New().Sum(passphraseBytes))
@@ -143,15 +143,7 @@ func CreateAESCryptor(passphrase string, option ScryptOptions) (aesGCM cipher.AE
 		return
 	}
 
-	block, err := aes.NewCipher(encryptionKey)
-	if err != nil {
-		return
-	}
-
-	aesGCM, err = cipher.NewGCM(block)
-	if err != nil {
-		return
-	}
+	aesChacha2AEAD, err = chacha20poly1305.New(encryptionKey)
 
 	return
 }
