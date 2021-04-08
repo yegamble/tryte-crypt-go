@@ -24,13 +24,15 @@ func Decrypt(encryptedSeed trinary.Trytes, passphrase string, options ScryptOpti
 		return
 	}
 
-	aesGCM, err := CreateAESCryptor(passphrase, options)
+	aead, err := CreateAESCryptor(passphrase, options)
 	if err != nil {
 		return
 	}
 
-	nonce := make([]byte, aesGCM.NonceSize())
-	openSeed, err := aesGCM.Open(nil, nonce, encryptedSeedBytes, nil)
+	nonce, ciphertext := encryptedSeedBytes[:aead.NonceSize()], encryptedSeedBytes[aead.NonceSize():]
+
+	//nonce := make([]byte, aead.NonceSize())
+	openSeed, err := aead.Open(nil, nonce, ciphertext, nil)
 	if err != nil {
 		return
 	}
