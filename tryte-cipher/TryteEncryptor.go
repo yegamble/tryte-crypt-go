@@ -103,18 +103,18 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 
 	log.Println("seed converted to bytes")
 
-	aesCryptor, err := CreateAESCryptor(passphrase, options)
+	aead, err := CreateAESCryptor(passphrase, options)
 	if err != nil {
 		return
 	}
 
-	nonce := make([]byte, aesCryptor.NonceSize(), aesCryptor.NonceSize()+len(seed)+aesCryptor.Overhead())
+	nonce := make([]byte, aead.NonceSize(), aead.NonceSize()+len(seed)+aead.Overhead())
 
 	if _, err := rand.Read(nonce); err != nil {
 		panic(err)
 	}
 
-	encryptedSeedBytes := aesCryptor.Seal(nonce, nonce, seedBytes, nil)
+	encryptedSeedBytes := aead.Seal(nonce, nonce, seedBytes, nil)
 	log.Println("seed encrypted, now converting to ASCII")
 
 	encryptedSeedTrytes, err := converter.ASCIIToTrytes(hex.EncodeToString(encryptedSeedBytes))
