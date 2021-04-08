@@ -2,6 +2,7 @@ package tryte_cipher
 
 import (
 	"crypto/cipher"
+	"crypto/rand"
 	"crypto/sha256"
 	"encoding/hex"
 	"errors"
@@ -102,13 +103,18 @@ func Encrypt(seed trinary.Trytes, passphrase string, options ScryptOptions, toug
 
 	log.Println("seed converted to bytes")
 
-	aesGCM, err := CreateAESCryptor(passphrase, options)
+	aesCryptor, err := CreateAESCryptor(passphrase, options)
 	if err != nil {
 		return
 	}
 
-	nonce := make([]byte, aesGCM.NonceSize())
-	encryptedSeedBytes := aesGCM.Seal(seedBytes[:0], nonce, seedBytes, nil)
+	nonce := make([]byte, aesCryptor.NonceSize(), aesCryptor.NonceSize()+len(seed)+aesCryptor.Overhead())
+
+	if _, err := rand.Read(nonce); err != nil {
+		panic(err)
+	}
+
+	encryptedSeedBytes := aesCryptor.Seal(nonce, nonce, seedBytes, nil)
 	log.Println("seed encrypted, now converting to ASCII")
 
 	encryptedSeedTrytes, err := converter.ASCIIToTrytes(hex.EncodeToString(encryptedSeedBytes))
@@ -143,7 +149,7 @@ func CreateAESCryptor(passphrase string, option ScryptOptions) (aesChacha2AEAD c
 		return
 	}
 
-	aesChacha2AEAD, err = chacha20poly1305.New(encryptionKey)
+	aesChacha2AEAD, err = chacha20poly1305.NewX(encryptionKey)
 
 	return
 }
