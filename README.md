@@ -1,4 +1,4 @@
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/yegamble/tryte-crypt-go/Go/master)   [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go?ref=badge_shield)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/yegamble/tryte-crypt-go/Go/master)](https://github.com/yegamble/tryte-crypt-go/actions/workflows/go.yml)   [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyegamble%2Ftryte-crypt-go?ref=badge_shield)
 
 
 # tryte-crypt-go
