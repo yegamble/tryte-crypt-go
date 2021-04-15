@@ -10,7 +10,6 @@ import (
 )
 
 func main() {
-
 	buf := bufio.NewReader(os.Stdin)
 
 	fmt.Print("Do you want start server mode? (Y/n) ")

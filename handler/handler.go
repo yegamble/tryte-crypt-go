@@ -4,19 +4,28 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/iotaledger/iota.go/trinary"
+	"github.com/markbates/pkger"
 	tryteCipher "github.com/yegamble/tryte-crypt-go/tryte-cipher"
+	"os"
 	"strconv"
 )
 
 var defaultOptions tryteCipher.ScryptOptions
 
 func SetRoutes() {
+
 	app := fiber.New()
 
 	seedHandler := app.Group("/", logger.New())
-
 	seedHandler.Get("/", func(c *fiber.Ctx) error {
-		return c.Status(fiber.StatusOK).JSON("Welcome to Seed Generator")
+
+		return pkger.Walk("/public", func(path string, info os.FileInfo, err error) error {
+			if err != nil {
+				return err
+			}
+
+			return nil
+		})
 	})
 
 	seedHandler.Post("/encrypt", func(c *fiber.Ctx) error {

@@ -19,9 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="combine two error messages for encryption difficulty.">
+    <list default="true" id="ce36aa89-d958-4e07-8368-585a34bc21ab" name="Default Changelist" comment="change aead variable in encryptor">
+      <change afterPath="$PROJECT_DIR$/handler/templateEngine.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/cryptor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cryptor_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +81,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Go Test.go test github.com/yegamble/tryte-crypt-go/tests">
-    <configuration name="TestDifficultyAboveNine in github.com/yegamble/tryte-crypt-go/tests (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCreateAESCryptor in github.com/yegamble/tryte-crypt-go/tests (3)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tryte-crypt-go" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <framework value="gotest" />
@@ -84,10 +89,10 @@
       <package value="github.com/yegamble/tryte-crypt-go/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestDifficultyAboveNine\E$" />
+      <pattern value="^\QTestCreateAESCryptor\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestDifficultyAboveNine in github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCreateAESCryptor in github.com/yegamble/tryte-crypt-go/tests (4)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tryte-crypt-go" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <framework value="gotest" />
@@ -95,7 +100,18 @@
       <package value="github.com/yegamble/tryte-crypt-go/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestDifficultyAboveNine\E$" />
+      <pattern value="^\QTestCreateAESCryptor\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tryte-crypt-go" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/yegamble/tryte-crypt-go/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestIfSeedIsCorrect\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -107,17 +123,6 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <pattern value="^\QTestIfSeedIsCorrect\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestNegativeDifficulty in github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="tryte-crypt-go" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/yegamble/tryte-crypt-go/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestNegativeDifficulty\E$" />
       <method v="2" />
     </configuration>
     <configuration name="go test github.com/yegamble/tryte-crypt-go/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -133,10 +138,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Go Test.go test github.com/yegamble/tryte-crypt-go/tests" />
-        <item itemvalue="Go Test.TestDifficultyAboveNine in github.com/yegamble/tryte-crypt-go/tests" />
-        <item itemvalue="Go Test.TestDifficultyAboveNine in github.com/yegamble/tryte-crypt-go/tests (1)" />
-        <item itemvalue="Go Test.TestNegativeDifficulty in github.com/yegamble/tryte-crypt-go/tests" />
+        <item itemvalue="Go Test.TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests (1)" />
         <item itemvalue="Go Test.TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests" />
+        <item itemvalue="Go Test.TestCreateAESCryptor in github.com/yegamble/tryte-crypt-go/tests (4)" />
+        <item itemvalue="Go Test.TestCreateAESCryptor in github.com/yegamble/tryte-crypt-go/tests (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -167,10 +172,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="show Generated Seed to User." />
-    <MESSAGE value="double sha encryption" />
-    <MESSAGE value="update status bad request in handler for error returns" />
-    <MESSAGE value="change command main function." />
     <MESSAGE value="update negative number and wrong seed test. add extra error for negtative difficulty/toughness test." />
     <MESSAGE value="switch encrypt and decrypt in command line so encrypt key is default." />
     <MESSAGE value="add MakeFile and yml" />
@@ -192,7 +193,11 @@
     <MESSAGE value="clean up seed generator returns" />
     <MESSAGE value="clean returns in seed generator" />
     <MESSAGE value="combine two error messages for encryption difficulty." />
-    <option name="LAST_COMMIT_MESSAGE" value="combine two error messages for encryption difficulty." />
+    <MESSAGE value="Add tests for error messages with negative difficulty." />
+    <MESSAGE value="add xChaCha20-Poly1305 with double sha256 hashing." />
+    <MESSAGE value="replace xChaCha20-Poly1305 New with NewX to ensure random nonce" />
+    <MESSAGE value="change aead variable in encryptor" />
+    <option name="LAST_COMMIT_MESSAGE" value="change aead variable in encryptor" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -206,10 +211,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="150" y="130" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1617657683577" />
-    <state x="450" y="270" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617659524158">
+    <state x="450" y="270" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617846647354">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="450" y="270" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1617659524158" />
+    <state x="450" y="270" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1617846647354" />
     <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1617538459716">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -238,22 +243,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1617519866460" />
-    <state width="699" height="191" key="GridCell.Tab.0.bottom" timestamp="1617814695613">
+    <state width="699" height="326" key="GridCell.Tab.0.bottom" timestamp="1617935625475">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="191" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617814695613" />
-    <state width="699" height="191" key="GridCell.Tab.0.center" timestamp="1617814695612">
+    <state width="699" height="326" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1617935625475" />
+    <state width="699" height="326" key="GridCell.Tab.0.center" timestamp="1617935625380">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="191" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617814695612" />
-    <state width="699" height="191" key="GridCell.Tab.0.left" timestamp="1617814695612">
+    <state width="699" height="326" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1617935625380" />
+    <state width="699" height="326" key="GridCell.Tab.0.left" timestamp="1617935625300">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="191" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617814695612" />
-    <state width="699" height="191" key="GridCell.Tab.0.right" timestamp="1617814695613">
+    <state width="699" height="326" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1617935625300" />
+    <state width="699" height="326" key="GridCell.Tab.0.right" timestamp="1617935625390">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="191" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617814695613" />
+    <state width="699" height="326" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1617935625390" />
     <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1617676559898">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -278,22 +283,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="358" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1617616201473" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617808353179">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617922360398">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617808353179" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617922360398" />
     <state width="720" height="438" key="XDebugger.FullValuePopup" timestamp="1617675771276">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="720" height="438" key="XDebugger.FullValuePopup/0.23.1440.877@0.23.1440.877" timestamp="1617675771276" />
-    <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617675984109">
+    <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617865464513">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1617675984107" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1617617497401">
+    <state x="517" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1617865464513" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1617864377694">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1617617497401" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1617864377694" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tryte_crypt_go$TestIfSeedIsCorrect_in_github_com_yegamble_tryte_crypt_go_tests.out" NAME="TestIfSeedIsCorrect in github.com/yegamble/tryte-crypt-go/tests Coverage Results" MODIFIED="1617775797313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
