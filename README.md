@@ -27,7 +27,7 @@ Encrypted Seed
 `go run main.go`
 
 ## Endpoints (Recommended Offline Use Only)
-To make this simple to use, I made 3 endpoints. I do not recommend using this on a website to generate seeds, only if you build offline and generate yourself.
+To make this simple to use, 3 endpoints were created. I do not recommend using this on a website to generate seeds, only if you build offline and generate yourself.
 
 | Endpoint  | Form Data                                                           |                                                                                                          
 | :---------| :-------------------------------------------------------------------|
